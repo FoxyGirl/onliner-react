@@ -3,6 +3,7 @@ import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
 import logo from './logo.svg'
+import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -42,12 +43,8 @@ class App extends Component {
               </div>
             </div>
             <div class="l-gradient-wrapper">
-              <div dangerouslySetInnerHTML={{ __html: '<!-- Top -->' }} />
-
-              <div dangerouslySetInnerHTML={{ __html: '<!-- Top -->' }} />
-
               <noscript>You need to enable JavaScript to run this app.</noscript>
-
+              <Header />
               <div className="App">
                 <header className="App-header">
                   <img src={logo} className="App-logo" alt="logo" />
