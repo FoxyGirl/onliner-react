@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Button } from 'antd'
 import logo from './logo.svg'
 import Header from './components/Header'
+import CatalogNavigation from './components/CatalogNavigation'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -45,6 +46,18 @@ class App extends Component {
             <div class="l-gradient-wrapper">
               <noscript>You need to enable JavaScript to run this app.</noscript>
               <Header />
+              <div class="g-middle" data-component="MiddleSection">
+                <div class="g-middle-i">
+                  <link
+                    rel="stylesheet"
+                    href="./Товары в каталоге Onliner.by_files/catalog-navigation.css"
+                  />
+                  <CatalogNavigation />
+                  <div class="catalog-content js-scrolling-area" data-component="CategoryPage">
+                    CategoryPage
+                  </div>
+                </div>
+              </div>
               <div className="App">
                 <header className="App-header">
                   <img src={logo} className="App-logo" alt="logo" />
