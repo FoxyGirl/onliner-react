@@ -11,10 +11,10 @@ import './App.css'
 class App extends Component {
   render() {
     return (
-      <div class="layout-container">
+      <div className="layout-container">
         <div id="container">
-          <div class="g-container-outer">
-            <div class="bnr-top-wide bnr-top-wide_fixed-height">
+          <div className="g-container-outer">
+            <div className="bnr-top-wide bnr-top-wide_fixed-height">
               <script async="async" src="./Товары в каталоге Onliner.by_files/gpt.js" />
 
               <div
@@ -42,11 +42,11 @@ class App extends Component {
                 </div>
               </div>
             </div>
-            <div class="l-gradient-wrapper">
+            <div className="l-gradient-wrapper">
               <noscript>You need to enable JavaScript to run this app.</noscript>
               <Header />
-              <div class="g-middle" data-component="MiddleSection">
-                <div class="g-middle-i">
+              <div className="g-middle" data-component="MiddleSection">
+                <div className="g-middle-i">
                   <CatalogNavigation />
                   <CategoryPage />
                 </div>
