@@ -3,6 +3,7 @@ import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
 import logo from './logo.svg'
+import Footer from './components/Footer'
 import './App.css'
 
 class App extends Component {
@@ -53,10 +54,7 @@ class App extends Component {
                   <p>Здесь будет React для onliner.</p>
                 </header>
               </div>
-
-              <div dangerouslySetInnerHTML={{ __html: '<!-- Bottom -->' }} />
-
-              <div dangerouslySetInnerHTML={{ __html: '<!-- Bottom -->' }} />
+              <Footer />
             </div>
           </div>
         </div>
