@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
-import logo from './logo.svg'
 import Header from './components/Header'
 import CatalogNavigation from './components/CatalogNavigation'
+import CategoryPage from './components/CategoryPage'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -12,7 +12,6 @@ class App extends Component {
   render() {
     return (
       <div class="layout-container">
-        <div dangerouslySetInnerHTML={{ __html: '<!-- Container -->' }} />
         <div id="container">
           <div class="g-container-outer">
             <div class="bnr-top-wide bnr-top-wide_fixed-height">
@@ -48,26 +47,14 @@ class App extends Component {
               <Header />
               <div class="g-middle" data-component="MiddleSection">
                 <div class="g-middle-i">
-                  <link
-                    rel="stylesheet"
-                    href="./Товары в каталоге Onliner.by_files/catalog-navigation.css"
-                  />
                   <CatalogNavigation />
-                  <div class="catalog-content js-scrolling-area" data-component="CategoryPage">
-                    CategoryPage
-                  </div>
+                  <CategoryPage />
                 </div>
               </div>
-              <div className="App">
-                <header className="App-header">
-                  <img src={logo} className="App-logo" alt="logo" />
-                  <p>Здесь будет React для onliner.</p>
-                </header>
-              </div>
-              <Footer />
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

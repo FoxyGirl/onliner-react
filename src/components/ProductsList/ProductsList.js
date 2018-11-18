@@ -7,17 +7,12 @@ class ProductsList extends React.Component {
       <div className="schema-products" style={{}}>
         <Product />
         <Product />
-        {}
-        {}
         <div className="schema-special-block" />
-        {}
-        {}
         <div className="schema-product__group">
           <div
             className="schema-product"
             data-bind="css: {'schema-product_narrow-sizes': $root.isNarrowImages}"
           >
-            {}
             <div className="schema-product__part schema-product__part_1">
               <div className="schema-product__compare">
                 <div data-bind="template: {name: 'schema-product__compare-template', data: product}">
