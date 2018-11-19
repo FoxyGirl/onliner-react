@@ -1,4 +1,5 @@
 import React from 'react'
+import { PATH_SRC } from '../../services'
 
 class Product extends React.Component {
   render() {
@@ -34,7 +35,7 @@ class Product extends React.Component {
               >
                 <img
                   data-bind="attr: {src: product.images.header, alt: product.full_name, title: product.full_name},\n                              style: {'max-width': product.sizes_percents.width ? product.sizes_percents.width + '%' : '',\n                                      'max-height': (product.image_size && product.image_size.height) ? Math.min(product.image_size.height, $root.imageBaseSizes.height) + 'px' : ''}"
-                  src="./Товары в каталоге Onliner.by_files/e35ac646b6f0187cb717c7b33979c5f1.jpg"
+                  src={`${PATH_SRC}e35ac646b6f0187cb717c7b33979c5f1.jpg`}
                   alt="Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)"
                   title="Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)"
                 />

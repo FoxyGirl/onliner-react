@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
@@ -11,10 +12,10 @@ import './App.css'
 class App extends Component {
   render() {
     return (
-      <div class="layout-container">
+      <div className="layout-container">
         <div id="container">
-          <div class="g-container-outer">
-            <div class="bnr-top-wide bnr-top-wide_fixed-height">
+          <div className="g-container-outer">
+            <div className="bnr-top-wide bnr-top-wide_fixed-height">
               <script async="async" src="./Товары в каталоге Onliner.by_files/gpt.js" />
 
               <div
@@ -42,12 +43,12 @@ class App extends Component {
                 </div>
               </div>
             </div>
-            <div class="l-gradient-wrapper">
+            <div className="l-gradient-wrapper">
               <noscript>You need to enable JavaScript to run this app.</noscript>
               <Header />
-              <div class="g-middle" data-component="MiddleSection">
-                <div class="g-middle-i">
-                  <CatalogNavigation />
+              <div className="g-middle" data-component="MiddleSection">
+                <div className="g-middle-i">
+                  <CatalogNavigation catalog={this.props.catalog} />
                   <CategoryPage />
                 </div>
               </div>
@@ -60,4 +61,12 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  console.log('stateIn', state)
+
+  return {
+    catalog: state.catalog,
+  }
+}
+
+export default connect(mapStateToProps)(App)
