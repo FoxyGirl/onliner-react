@@ -1,8 +1,8 @@
 import React from 'react'
-import { readCatalog } from '../../ducks/catalog'
+import { readCatalog } from 'src/ducks/catalog'
 import { dispatch } from '../../store'
 import { PATH_SRC } from '../../services'
-import CatalogNavigationItem from '../CatalogNavigationItem'
+import CatalogNavigationItem from './CatalogNavigationItem'
 
 class CatalogNavigation extends React.Component {
   componentDidMount = () => {
