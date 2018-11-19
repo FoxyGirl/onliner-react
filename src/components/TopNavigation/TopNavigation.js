@@ -1,5 +1,5 @@
 import React from 'react'
-import MainNavigation from '../MainNavigation'
+import MainNavigation from 'src/components/MainNavigation'
 
 class TopNavigation extends React.Component {
   render() {

@@ -1,7 +1,7 @@
 import React from 'react'
-import TopMenu from '../TopMenu'
-import Search from '../Search'
-import UserBar from '../UserBar'
+import TopMenu from 'src/components/TopMenu'
+import Search from 'src/components/Search'
+import UserBar from 'src/components/UserBar'
 
 class Header extends React.Component {
   render() {

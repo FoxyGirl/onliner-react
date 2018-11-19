@@ -1,9 +1,9 @@
 import React from 'react'
-import CategoryHeader from '../CategoryHeader'
-import CategoryFilter from '../CategoryFilter'
-import Order from '../Order'
-import ProductsList from '../ProductsList'
-import Pagination from '../Pagination'
+import CategoryHeader from 'src/components/CategoryHeader'
+import CategoryFilter from 'src/components/CategoryFilter'
+import Order from 'src/components/Order'
+import ProductsList from 'src/components/ProductsList'
+import Pagination from 'src/components/Pagination'
 
 class CategoryPage extends React.Component {
   render() {

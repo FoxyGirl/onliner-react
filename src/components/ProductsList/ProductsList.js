@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { dispatch } from '../../store'
-import { readGoods } from '../../ducks/goods'
+import { dispatch } from 'src/store'
+import { readGoods } from 'src/ducks/goods'
 import Product from './Product'
 
 class ProductsList extends React.Component {

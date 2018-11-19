@@ -1,5 +1,5 @@
 import React from 'react'
-import { PATH_SRC } from '../../services'
+import { PATH_SRC } from 'src/services'
 
 class Product extends React.Component {
   render() {

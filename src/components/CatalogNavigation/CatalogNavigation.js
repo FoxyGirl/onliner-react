@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { dispatch } from '../../store'
+import { dispatch } from 'src/store'
 import PropTypes from 'prop-types'
-import { readCatalog } from '../../ducks/catalog'
-import { PATH_SRC } from '../../services'
+import { readCatalog } from 'src/ducks/catalog'
+import { PATH_SRC } from 'src/services'
 import CatalogNavigationItem from './CatalogNavigationItem'
 
 class CatalogNavigation extends React.Component {

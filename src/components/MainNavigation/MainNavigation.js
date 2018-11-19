@@ -1,5 +1,5 @@
 import React from 'react'
-import MainNavigationItem from '../MainNavigationItem'
+import MainNavigationItem from './MainNavigationItem'
 
 class MainNavigation extends React.Component {
   render() {

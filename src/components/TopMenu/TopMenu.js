@@ -1,5 +1,5 @@
 import React from 'react'
-import TopNavigation from '../TopNavigation'
+import TopNavigation from 'src/components/TopNavigation'
 
 class TopMenu extends React.Component {
   render() {
