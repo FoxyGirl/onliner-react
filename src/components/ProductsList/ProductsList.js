@@ -1,8 +1,16 @@
 import React from 'react'
-import Product from '../Product'
+import { connect } from 'react-redux'
+import { dispatch } from '../../store'
+import { readGoods } from './../ducks/goods'
+import Product from './Product'
 
 class ProductsList extends React.Component {
+  componentDidMount = () => {
+    console.log('readGoods')
+    dispatch(readGoods())
+  }
   render() {
+    console.log('!!! ProductList')
     return (
       <div className="schema-products" style={{}}>
         <Product />
@@ -33,7 +41,6 @@ class ProductsList extends React.Component {
                 </div>
               </div>
               <div className="schema-product__image">
-                {}
                 <a
                   data-bind="attr: {href: product.html_url}"
                   href="https://catalog.onliner.by/smartwatch/apple/applemj8q2"
@@ -45,7 +52,6 @@ class ProductsList extends React.Component {
                     title="Apple Watch Edition 42mm Yellow Gold with Black Sport Band (MJ8Q2)"
                   />
                 </a>
-                {}
               </div>
             </div>
             {}
@@ -80,8 +86,6 @@ class ProductsList extends React.Component {
                     <div className="schema-product__offers">
                       <a
                         className="schema-product__button button button_orange"
-                        data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj8q2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Edition 42mm Yellow Gold with Black Sport Band (MJ8Q2)"
                       >
@@ -255,7 +259,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj4a2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Edition 42mm Rose Gold with White Sport Band (MJ4A2)"
                       >
@@ -429,7 +433,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemkl52/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Edition 38mm Yellow Gold with Black Sport Band (MKL52)"
                       >
@@ -588,7 +592,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj8p2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Edition 38mm Rose Gold with White Sport Band (MJ8P2)"
                       >
@@ -747,7 +751,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemkl62/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Edition 42mm Yellow Gold with Black Classic Buckle (MKL62)"
                       >
@@ -921,7 +925,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnpq2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm White Ceramic with Cloud Sport Band [MNPQ2]"
                       >
@@ -1089,7 +1093,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj482/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Space Black with Space Black Link Bracelet (MJ482)"
                       >
@@ -1263,7 +1267,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnpt2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm Stainless Steel with Link Bracelet [MNPT2]"
                       >
@@ -1431,7 +1435,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnq02/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm Space Black with Link Bracelet [MNQ02]"
                       >
@@ -1599,7 +1603,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj472/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Link Bracelet (MJ472)"
                       >
@@ -1773,7 +1777,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj3f2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 38mm Space Black with Space Black Link Bracelet (MJ3F2)"
                       >
@@ -1938,7 +1942,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/samsung/smr765/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Samsung Gear S3 frontier LTE [SM-R765]"
                       >
@@ -2112,7 +2116,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnp92/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 38mm Stainless Steel with Modern Buckle [MNP92]"
                       >
@@ -2265,7 +2269,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnq12/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm Space Black with Milanese Loop [MNQ12]"
                       >
@@ -2433,7 +2437,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemmg22/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Space Black with Space Black Milanese Loop [MMG22]"
                       >
@@ -2607,7 +2611,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemlc92/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Saddle Brown Bracelet [MLC92]"
                       >
@@ -2781,7 +2785,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnpu2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm Stainless Steel with Milanese Loop [MNPU2]"
                       >
@@ -2982,7 +2986,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj402/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Light Brown Leather Loop (MJ402)"
                       >
@@ -3156,7 +3160,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnpw2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm Stainless Steel with Leather Loop [MNPW2]"
                       >
@@ -3324,7 +3328,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj432/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Stone Leather Loop (MJ432)"
                       >
@@ -3498,7 +3502,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj372/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 38mm Stainless Steel with Soft Pink Modern Buckle [MJ372]"
                       >
@@ -3663,7 +3667,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemlcl2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 38mm Stainless Stee with Saddle Brown Bracelet [MLCL2]"
                       >
@@ -3828,7 +3832,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnpr2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 42mm Stainless Steel with White Sport [MNPR2]"
                       >
@@ -3996,7 +4000,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemlfc2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Midnight Blue Loop [MLFC2]"
                       >
@@ -4170,7 +4174,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemnp72/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Series 2 38mm Stainless Steel with Classic Buckle [MNP72]"
                       >
@@ -4323,7 +4327,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj342/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 38mm Stainless Steel with Midnight Blue Buckle [MJ342]"
                       >
@@ -4488,7 +4492,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemjyp2/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Black Loop (L) [MJYP2]"
                       >
@@ -4662,7 +4666,7 @@ class ProductsList extends React.Component {
                       <a
                         className="schema-product__button button button_orange"
                         data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                        onclick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
+                        onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                         href="https://catalog.onliner.by/smartwatch/apple/applemj452/prices"
                         title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch 42mm Stainless Steel with Blue Leather Loop (MJ452)"
                       >
@@ -4768,4 +4772,12 @@ class ProductsList extends React.Component {
   }
 }
 
-export default ProductsList
+const mapStateToProps = state => {
+  console.log('stateInGoods', state)
+
+  return {
+    goods: state.goods,
+  }
+}
+
+export default connect(mapStateToProps)(ProductsList)

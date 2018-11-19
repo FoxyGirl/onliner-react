@@ -58,7 +58,7 @@ class CategoryHeader extends React.Component {
           <a
             href="https://catalog.onliner.by/used/create"
             className="button button_green button_base schema-header__button"
-            onclick="window.ga && ga('catalog.send', 'event', '\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u043E\u0431\u044A\u044F\u0432\u043B\u0435\u043D\u0438\u0435', '\u0420\u0430\u0437\u0434\u0435\u043B');"
+            onClick="window.ga && ga('catalog.send', 'event', '\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u043E\u0431\u044A\u044F\u0432\u043B\u0435\u043D\u0438\u0435', '\u0420\u0430\u0437\u0434\u0435\u043B');"
           >
             Разместить объявление
           </a>

@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react'
 
 class Pagination extends React.Component {
   render() {
     return (
-      <div
-        className="schema-pagination schema-pagination_visible"
-        id="schema-pagination"
-      >
+      <div className="schema-pagination schema-pagination_visible" id="schema-pagination">
         <a
           className="schema-pagination__main"
           data-bind="click: $root.nextPage.bind($root),\n              css: {'schema-pagination__main_disabled': $root.page.current() === $root.page.last()}"
@@ -18,10 +15,7 @@ class Pagination extends React.Component {
             className="schema-pagination__dropdown"
             data-bind="click: $root.toggleDropdown.bind($root)"
           >
-            <div
-              className="schema-pagination__dropdown-value"
-              data-bind="text: $root.page.current"
-            >
+            <div className="schema-pagination__dropdown-value" data-bind="text: $root.page.current">
               1
             </div>
             <div className="schema-pagination__dropdown-items" />
@@ -41,10 +35,10 @@ class Pagination extends React.Component {
                 id="mCSB_1_container"
                 className="mCSB_container mCS_x_hidden mCS_no_scrollbar_x"
                 style={{
-                  position: "relative",
-                  top: "0px",
-                  left: "0px",
-                  width: "0px"
+                  position: 'relative',
+                  top: '0px',
+                  left: '0px',
+                  width: '0px',
                 }}
                 dir="ltr"
               >
@@ -190,7 +184,7 @@ class Pagination extends React.Component {
                 id="mCSB_1_scrollbar_horizontal"
                 className="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_horizontal"
                 style={{
-                  display: "none"
+                  display: 'none',
                 }}
               >
                 <div className="mCSB_draggerContainer">
@@ -198,11 +192,10 @@ class Pagination extends React.Component {
                     id="mCSB_1_dragger_horizontal"
                     className="mCSB_dragger"
                     style={{
-                      position: "absolute",
-                      minWidth: "30px",
-                      left: "0px"
+                      position: 'absolute',
+                      minWidth: '30px',
+                      left: '0px',
                     }}
-                    oncontextmenu="return false;"
                   >
                     <div className="mCSB_dragger_bar" />
                   </div>
@@ -213,8 +206,8 @@ class Pagination extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Pagination;
+export default Pagination

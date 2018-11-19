@@ -1,6 +1,6 @@
 import React from 'react'
-import { readCatalog } from 'src/ducks/catalog'
 import { dispatch } from '../../store'
+import { readCatalog } from '../../ducks/catalog'
 import { PATH_SRC } from '../../services'
 import CatalogNavigationItem from './CatalogNavigationItem'
 
