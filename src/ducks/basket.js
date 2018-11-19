@@ -1,6 +1,6 @@
 import { createAction, createReducer } from 'redux-act'
 import axios from 'axios'
-import { API } from '../service'
+import { API } from '../services'
 
 export const REDUCER = 'BASKET'
 

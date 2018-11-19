@@ -1,6 +1,7 @@
 import React from 'react'
 import { readCatalog } from '../../ducks/catalog'
 import { dispatch } from '../../store'
+import { PATH_SRC } from '../../services'
 import CatalogNavigationItem from '../CatalogNavigationItem'
 
 class CatalogNavigation extends React.Component {
@@ -19,7 +20,7 @@ class CatalogNavigation extends React.Component {
 
     return (
       <React.Fragment>
-        <link rel="stylesheet" href="./Товары в каталоге Onliner.by_files/catalog-navigation.css" />
+        <link rel="stylesheet" href={`${PATH_SRC}catalog-navigation.css`} />
 
         <div className="catalog-navigation">
           <div
