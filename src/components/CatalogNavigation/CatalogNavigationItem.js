@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class CatalogNavigationItem extends React.Component {
   render() {
@@ -12,6 +13,11 @@ class CatalogNavigationItem extends React.Component {
       </li>
     )
   }
+}
+
+CatalogNavigationItem.PropTypes = {
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 export default CatalogNavigationItem

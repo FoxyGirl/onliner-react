@@ -1,5 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { dispatch } from '../../store'
+import PropTypes from 'prop-types'
 import { readCatalog } from '../../ducks/catalog'
 import { PATH_SRC } from '../../services'
 import CatalogNavigationItem from './CatalogNavigationItem'
@@ -38,4 +40,14 @@ class CatalogNavigation extends React.Component {
   }
 }
 
-export default CatalogNavigation
+CatalogNavigation.PropTypes = {
+  catalog: PropTypes.object.isRequired,
+}
+
+const mapStateToProps = state => {
+  return {
+    catalog: state.catalog,
+  }
+}
+
+export default connect(mapStateToProps)(CatalogNavigation)

@@ -61,12 +61,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  console.log('stateIn', state)
-
-  return {
-    catalog: state.catalog,
-  }
-}
-
-export default connect(mapStateToProps)(App)
+export default App
