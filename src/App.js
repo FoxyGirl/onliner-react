@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
@@ -47,7 +48,7 @@ class App extends Component {
               <Header />
               <div className="g-middle" data-component="MiddleSection">
                 <div className="g-middle-i">
-                  <CatalogNavigation />
+                  <CatalogNavigation catalog={this.props.catalog} />
                   <CategoryPage />
                 </div>
               </div>
@@ -60,4 +61,12 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  console.log('stateIn', state)
+
+  return {
+    catalog: state.catalog,
+  }
+}
+
+export default connect(mapStateToProps)(App)
