@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import { dispatch } from 'src/store'
-import PropTypes from 'prop-types'
 import { readCatalog } from 'src/ducks/catalog'
+import PropTypes from 'prop-types'
 import { PATH_SRC } from 'src/services'
 import CatalogNavigationItem from './CatalogNavigationItem'
 
@@ -15,15 +15,11 @@ class CatalogNavigation extends React.Component {
 
   render() {
     const { catalog } = this.props
-    console.log(`catalog = ${JSON.stringify(catalog)}`)
-
+    console.log(`catalog  ${JSON.stringify(catalog)}`)
     const newItems = catalog.data
-    console.log(`newItems = ${JSON.stringify(newItems)} / isArray ${Array.isArray(newItems)}`)
-
     return (
-      <React.Fragment>
+      <Fragment>
         <link rel="stylesheet" href={`${PATH_SRC}catalog-navigation.css`} />
-
         <div className="catalog-navigation">
           <div
             className="catalog-navigation-classifier-buffer"
@@ -35,13 +31,16 @@ class CatalogNavigation extends React.Component {
             {Array.isArray(newItems) ? this.renderList(newItems) : null}
           </ul>
         </div>
-      </React.Fragment>
+      </Fragment>
     )
   }
 }
 
-CatalogNavigation.PropTypes = {
-  catalog: PropTypes.object.isRequired,
+CatalogNavigation.propTypes = {
+  catalog: PropTypes.shape({
+    data: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool,
+  }),
 }
 
 const mapStateToProps = state => {

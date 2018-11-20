@@ -15,8 +15,7 @@ class CatalogNavigationItem extends React.Component {
   }
 }
 
-CatalogNavigationItem.PropTypes = {
-  key: PropTypes.string.isRequired,
+CatalogNavigationItem.propTypes = {
   name: PropTypes.string.isRequired,
 }
 

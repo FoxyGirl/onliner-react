@@ -7,7 +7,7 @@ export const REDUCER = 'CATALOG'
 const NS = `${REDUCER}__`
 
 const initialState = {
-  data: {},
+  data: [],
   isLoading: false,
 }
 
