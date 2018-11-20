@@ -1,22 +1,23 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { dispatch } from 'src/store'
-import { readCatalog } from 'src/ducks/catalog'
+import { readDepartments } from 'src/ducks/departments'
 import PropTypes from 'prop-types'
 import { PATH_SRC } from 'src/services'
-import CatalogNavigationItem from './CatalogNavigationItem'
+import DepartmentsNavigationItem from './DepartmentsNavigationItem'
 
-class CatalogNavigation extends React.Component {
+class DepartmentsNavigation extends Component {
   componentDidMount = () => {
-    dispatch(readCatalog())
+    dispatch(readDepartments())
   }
 
-  renderList = items => items.map(({ id, name }) => <CatalogNavigationItem key={id} name={name} />)
+  renderList = items =>
+    items.map(({ id, name }) => <DepartmentsNavigationItem key={id} name={name} />)
 
   render() {
-    const { catalog } = this.props
-    console.log(`catalog  ${JSON.stringify(catalog)}`)
-    const newItems = catalog.data
+    const { departments } = this.props
+    console.log(`departments  ${JSON.stringify(departments)}`)
+    const newItems = departments.data
     return (
       <Fragment>
         <link rel="stylesheet" href={`${PATH_SRC}catalog-navigation.css`} />
@@ -36,8 +37,8 @@ class CatalogNavigation extends React.Component {
   }
 }
 
-CatalogNavigation.propTypes = {
-  catalog: PropTypes.shape({
+DepartmentsNavigation.propTypes = {
+  departments: PropTypes.shape({
     data: PropTypes.array.isRequired,
     isLoading: PropTypes.bool,
   }),
@@ -45,8 +46,8 @@ CatalogNavigation.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    catalog: state.catalog,
+    departments: state.departments,
   }
 }
 
-export default connect(mapStateToProps)(CatalogNavigation)
+export default connect(mapStateToProps)(DepartmentsNavigation)

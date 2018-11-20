@@ -4,7 +4,7 @@ import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
 import Header from './components/Header'
-import CatalogNavigation from './components/CatalogNavigation'
+import DepartmentsNavigation from './components/DepartmentsNavigation'
 import CategoryPage from './components/CategoryPage'
 import Footer from './components/Footer'
 import './App.css'
@@ -48,7 +48,7 @@ class App extends Component {
               <Header />
               <div className="g-middle" data-component="MiddleSection">
                 <div className="g-middle-i">
-                  <CatalogNavigation catalog={this.props.catalog} />
+                  <DepartmentsNavigation />
                   <CategoryPage />
                 </div>
               </div>
