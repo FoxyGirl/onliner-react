@@ -47,7 +47,7 @@ class CategoryPage extends React.Component {
                         src="./\u0422\u043E\u0432\u0430\u0440\u044B \u0432 \u043A\u0430\u0442\u0430\u043B\u043E\u0433\u0435 Onliner.by_files/container(1).html"
                         id="google_ads_iframe_/312496551/catalog_240x400_0"
                         title="3rd party ad content"
-                        name
+                        name=""
                         scrolling="no"
                         marginWidth={0}
                         marginHeight={0}
@@ -100,6 +100,7 @@ class CategoryPage extends React.Component {
                 <div className="compare-button__inner">
                   <div className="compare-button__state compare-button__state_initial">
                     <a
+                      href="cc"
                       title="\u041E\u0447\u0438\u0441\u0442\u0438\u0442\u044C \u0441\u043F\u0438\u0441\u043E\u043A \u0441\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u044F"
                       tabIndex={-1}
                       className="compare-button__sub compare-button__sub_control"
@@ -116,7 +117,7 @@ class CategoryPage extends React.Component {
                     </a>
                   </div>
                   <div className="compare-button__state compare-button__state_clear compare-button__state_hidden">
-                    <a tabIndex={-1} className="compare-button__sub">
+                    <a tabIndex={-1} className="compare-button__sub" href="cc">
                       Очистить список сравнения
                     </a>
                   </div>

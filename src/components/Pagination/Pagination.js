@@ -4,10 +4,7 @@ class Pagination extends React.Component {
   render() {
     return (
       <div className="schema-pagination schema-pagination_visible" id="schema-pagination">
-        <a
-          className="schema-pagination__main"
-          data-bind="click: $root.nextPage.bind($root),\n              css: {'schema-pagination__main_disabled': $root.page.current() === $root.page.last()}"
-        >
+        <a href="pp" className="schema-pagination__main">
           <span data-bind="text: $root.nextPageText">Следующие 30 товаров</span>
         </a>
         <div className="schema-pagination__secondary">
@@ -51,6 +48,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -62,6 +60,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -73,6 +72,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -84,6 +84,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -95,6 +96,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -106,6 +108,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -117,6 +120,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -128,6 +132,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -139,6 +144,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -150,6 +156,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -161,6 +168,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >
@@ -172,6 +180,7 @@ class Pagination extends React.Component {
                     data-bind="css: {'schema-pagination__pages-item_active': $root.page.current() === number}"
                   >
                     <a
+                      href="pp"
                       className="schema-pagination__pages-link"
                       data-bind="click: function () { $root.setPage(number) }, text: number"
                     >

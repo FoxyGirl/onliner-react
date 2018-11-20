@@ -34,9 +34,9 @@ class App extends Component {
                     width="728"
                     height="90"
                     scrolling="no"
-                    marginwidth="0"
-                    marginheight="0"
-                    frameborder="0"
+                    marginWidth="0"
+                    marginHeight="0"
+                    frameBorder="0"
                     style={{ border: '0px', verticalAlign: 'bottom' }}
                     src="./Товары в каталоге Onliner.by_files/saved_resource.html"
                   />

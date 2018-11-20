@@ -71,8 +71,6 @@ class Product extends React.Component {
                   <div className="schema-product__offers">
                     <a
                       className="schema-product__button button button_orange"
-                      data-bind="attr: {href: $data.prices.html_url, title: '\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 ' + $data.full_name},\n                              text: $data.offers + ' ' + $root.format.pluralForm($data.offers, ['\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F', '\u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439'])"
-                      onClick="window.ga && window.ga('catalogContext.send', 'event', 'button', 'offer');\n                              window.VK && VK.Retargeting.Event('compare_vk');\n                              window.fbq && fbq('trackCustom', 'compare_fb');\n                              window._trm && _trm.push({ id: window.SOCIAL_PIXELS_IDS.mailru.global || null, type: 'reachGoal', goal: 'compare_ok' });"
                       href="https://catalog.onliner.by/smartwatch/apple/applemj3k2/prices"
                       title="\u0421\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u043D\u0430 Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)"
                     >
