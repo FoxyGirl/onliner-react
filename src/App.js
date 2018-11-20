@@ -16,12 +16,7 @@ class App extends Component {
         <div id="container">
           <div className="g-container-outer">
             <div className="bnr-top-wide bnr-top-wide_fixed-height">
-              <script async="async" src="./Товары в каталоге Onliner.by_files/gpt.js" />
-
-              <div
-                dangerouslySetInnerHTML={{ __html: '<!-- /312496551/catalog_970x90(ATF) -->' }}
-              />
-
+              <div>Banner</div>
               <div id="div-gpt-ad-1476699139023-0">
                 <div
                   id="google_ads_iframe_/312496551/catalog_970x90(ATF)_0__container__"
