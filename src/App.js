@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import { dispatch } from './store'
+import { readDepartments } from './ducks/departments'
 import { renderRoutes } from 'react-router-config'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
@@ -10,6 +11,10 @@ import Footer from './components/Footer'
 import './App.css'
 
 class App extends Component {
+  componentDidMount = () => {
+    dispatch(readDepartments())
+  }
+
   render() {
     return (
       <div className="layout-container">

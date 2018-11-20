@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class DepartmentsNavigationItem extends Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+  }
   render() {
     const { id, name } = this.props
     return (
@@ -13,10 +16,6 @@ class DepartmentsNavigationItem extends Component {
       </li>
     )
   }
-}
-
-DepartmentsNavigationItem.propTypes = {
-  name: PropTypes.string.isRequired,
 }
 
 export default DepartmentsNavigationItem
