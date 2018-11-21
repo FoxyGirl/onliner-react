@@ -1,14 +1,12 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import InfoLoader from 'src/components/InfoLoader'
 
 class CategoryFilter extends React.Component {
   render() {
-    const { isLoadingGoods, goods } = this.props
     return (
       <div className="schema-filter__wrapper">
         <div className="schema-filter" id="schema-filter" style={{}}>
-          <div data-bind="template: {name: 'schema-filter-template__facets-list', data: $root.facets.general}">
+          <div>
             <div className="schema-filter__fieldset schema-filter__fieldset_decor">
               <div className="schema-filter__label">Каталог.Onliner</div>
               <div className="schema-filter__hint schema-filter__hint_alter">
@@ -40,16 +38,10 @@ class CategoryFilter extends React.Component {
                         <span>Город</span>
                       </div>
                       <div className="schema-filter__hint">только для объявлений</div>
-                      {}
                     </div>
                     <div className="schema-filter-collapse__body">
-                      {}
-                      {}
-                      {}
-                      {}
                       <div className="schema-filter__facet">
                         <ul className="schema-filter__list">
-                          {}
                           <li>
                             <label className="schema-filter__checkbox-item">
                               <span className="i-checkbox">
@@ -138,9 +130,8 @@ class CategoryFilter extends React.Component {
                               </span>
                             </label>
                           </li>
-                          {}
                         </ul>
-                        {}
+
                         <div
                           className="schema-filter-control schema-filter-control_more"
                           data-bind="click: facet.togglePopover.bind(facet)"
@@ -163,10 +154,7 @@ class CategoryFilter extends React.Component {
                                 className="schema-filter-popover__columns schema-filter-popover__columns_2"
                                 data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                               >
-                                {}
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -189,8 +177,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -213,8 +199,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -237,8 +221,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -261,8 +243,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -285,8 +265,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -309,8 +287,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -333,8 +309,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -357,8 +331,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -381,8 +353,6 @@ class CategoryFilter extends React.Component {
                                   </label>
                                 </div>
                                 <div className="schema-filter-popover__column-item">
-                                  {}
-                                  {}
                                   <label
                                     className="schema-filter__checkbox-item"
                                     data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -404,54 +374,25 @@ class CategoryFilter extends React.Component {
                                     </span>
                                   </label>
                                 </div>
-                                {}
                               </div>
                             </div>
                           </div>
                         </div>
-                        {}
                       </div>
-                      {}
-                      {}
-                      {}
-                      {}
-                      {}
-                      {}
-                      {}
-                      {}
                     </div>
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -468,45 +409,24 @@ class CategoryFilter extends React.Component {
                     С доставкой по Беларуси
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Производитель
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -602,9 +522,8 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
+
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
@@ -627,16 +546,14 @@ class CategoryFilter extends React.Component {
                         className="schema-filter-popover__columns schema-filter-popover__columns_4"
                         data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                       >
-                        {}
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             a
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -659,8 +576,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -683,8 +598,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -707,8 +620,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -731,8 +642,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -755,8 +664,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -779,8 +686,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -803,8 +708,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -827,8 +730,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -851,14 +752,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             b
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -881,8 +781,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -905,8 +803,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -929,8 +825,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -953,8 +847,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -977,8 +869,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1001,14 +891,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             c
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1031,8 +920,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1055,8 +942,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1079,14 +964,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             d
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1109,8 +993,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1133,8 +1015,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1157,8 +1037,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1181,14 +1059,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             e
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1211,8 +1088,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1235,8 +1110,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1259,8 +1132,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1283,8 +1154,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1307,14 +1176,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             f
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1337,8 +1205,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1361,8 +1227,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1385,8 +1249,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1409,14 +1271,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             g
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1439,8 +1300,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1463,8 +1322,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1487,8 +1344,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1511,8 +1366,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1535,8 +1388,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1559,14 +1410,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             h
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1589,8 +1439,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1613,8 +1461,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1637,8 +1483,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1661,8 +1505,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1685,14 +1527,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             i
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1715,8 +1556,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1739,14 +1578,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             j
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1769,8 +1607,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1793,14 +1629,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             k
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1823,14 +1658,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             l
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1853,8 +1687,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1877,8 +1709,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1901,8 +1731,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1925,8 +1753,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1949,8 +1775,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -1973,14 +1797,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             m
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2003,8 +1826,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2027,8 +1848,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2051,8 +1870,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2075,8 +1892,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2099,8 +1914,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2123,8 +1936,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2147,8 +1958,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2171,8 +1980,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2195,8 +2002,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2219,14 +2024,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             n
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2249,8 +2053,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2273,8 +2075,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2297,8 +2097,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2321,8 +2119,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2345,14 +2141,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             o
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2375,8 +2170,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2399,14 +2192,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             p
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2429,8 +2221,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2453,8 +2243,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2477,8 +2265,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2501,8 +2287,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2525,14 +2309,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             q
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2555,14 +2338,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             r
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2585,8 +2367,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2609,8 +2389,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2633,8 +2411,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2657,14 +2433,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             s
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2687,8 +2462,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2711,8 +2484,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2735,8 +2506,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2759,8 +2528,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2783,8 +2550,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2807,8 +2572,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2831,8 +2594,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2855,8 +2616,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2879,14 +2638,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             t
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2909,8 +2667,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2933,8 +2689,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2957,8 +2711,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -2981,8 +2733,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3005,14 +2755,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             v
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3035,8 +2784,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3059,14 +2806,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             w
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3089,8 +2835,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3113,8 +2857,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3137,8 +2879,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3161,8 +2901,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3185,14 +2923,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             x
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3215,14 +2952,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             к
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3245,8 +2981,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3268,60 +3002,29 @@ class CategoryFilter extends React.Component {
                             </span>
                           </label>
                         </div>
-                        {}
                       </div>
                     </div>
                   </div>
                 </div>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
               <div className="schema-filter__label">
-                {}
-                {}
-                {}
                 <span data-bind="html: facet.segment_related_name[$root.activeSegment()] + (facet.unit ? ', ' + facet.unit : '')">
                   Минимальная цена в предложениях магазинов
                 </span>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__number-range', data: facet}"
               >
-                {}
-                <ul className="schema-filter__list">
-                  {}
-                  {}
-                </ul>
-                {}
+                <ul className="schema-filter__list" />
+
                 <div className="schema-filter__group">
                   <div className="schema-filter-control schema-filter-control_input">
                     <input
@@ -3342,43 +3045,23 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Магазины
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -3512,9 +3195,8 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
+
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
@@ -3537,16 +3219,14 @@ class CategoryFilter extends React.Component {
                         className="schema-filter-popover__columns schema-filter-popover__columns_2"
                         data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                       >
-                        {}
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             2
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3569,14 +3249,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             5
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3599,14 +3278,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             a
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3629,8 +3307,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3653,14 +3329,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             b
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3683,8 +3358,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3707,14 +3380,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             f
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3737,14 +3409,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             g
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3767,8 +3438,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3791,8 +3460,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3815,8 +3482,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3839,14 +3504,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             i
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3869,8 +3533,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3893,8 +3555,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3917,14 +3577,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             m
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3947,14 +3606,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             n
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -3977,8 +3635,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4001,8 +3657,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4025,14 +3679,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             p
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4055,14 +3708,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             s
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4085,8 +3737,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4109,8 +3759,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4133,8 +3781,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4157,14 +3803,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             t
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4187,8 +3832,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4211,14 +3854,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             v
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4241,8 +3883,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4265,14 +3905,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             w
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4295,14 +3934,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             x
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4325,8 +3963,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4349,14 +3985,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             е
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4379,14 +4014,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             м
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4409,8 +4043,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4433,8 +4065,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4457,14 +4087,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             н
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4487,14 +4116,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             с
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4517,14 +4145,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             т
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4547,8 +4174,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4571,14 +4196,13 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
                           <div
                             className="schema-filter-popover__column-letter"
                             data-bind="text: item.letter"
                           >
                             ф
                           </div>
-                          {}
+
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -4600,34 +4224,17 @@ class CategoryFilter extends React.Component {
                             </span>
                           </label>
                         </div>
-                        {}
                       </div>
                     </div>
                   </div>
                 </div>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -4651,34 +4258,19 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Дата выхода на рынок, года
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__number-range', data: facet}"
               >
-                {}
-                <ul className="schema-filter__list">
-                  {}
-                  {}
-                </ul>
-                {}
+                <ul className="schema-filter__list" />
+
                 <div className="schema-filter__group">
                   <div className="schema-filter-control schema-filter-control_input">
                     <input
@@ -4700,22 +4292,12 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -4758,29 +4340,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Тип
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -4857,32 +4428,14 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -4906,29 +4459,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Программная платформа
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -5024,32 +4566,14 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5076,29 +4600,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Поддержка программных платформ
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -5194,32 +4707,14 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5247,29 +4742,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   С SIM-картой
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -5327,32 +4811,14 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5383,22 +4849,11 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -5415,24 +4870,13 @@ class CategoryFilter extends React.Component {
                     Для детей
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5459,22 +4903,11 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -5491,24 +4924,13 @@ class CategoryFilter extends React.Component {
                     GPS
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5532,22 +4954,11 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -5564,24 +4975,13 @@ class CategoryFilter extends React.Component {
                     Умный будильник
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5605,22 +5005,11 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -5637,24 +5026,13 @@ class CategoryFilter extends React.Component {
                     Пульсометр
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5718,29 +5096,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Технология экрана
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -5874,32 +5241,14 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -5958,22 +5307,11 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -5990,24 +5328,13 @@ class CategoryFilter extends React.Component {
                     Сенсорный экран
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -6031,22 +5358,11 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
               >
-                {}
                 <label className="schema-filter__checkbox-item">
                   <span className="i-checkbox">
                     <input
@@ -6063,24 +5379,13 @@ class CategoryFilter extends React.Component {
                     Постоянная работа экрана
                   </span>
                 </label>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -6101,29 +5406,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Материал корпуса
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -6219,9 +5513,8 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
+
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
@@ -6244,10 +5537,7 @@ class CategoryFilter extends React.Component {
                         className="schema-filter-popover__columns schema-filter-popover__columns_2"
                         data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                       >
-                        {}
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6270,8 +5560,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6294,8 +5582,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6318,8 +5604,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6342,8 +5626,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6366,8 +5648,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6390,8 +5670,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6414,8 +5692,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6438,8 +5714,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6461,34 +5735,17 @@ class CategoryFilter extends React.Component {
                             </span>
                           </label>
                         </div>
-                        {}
                       </div>
                     </div>
                   </div>
                 </div>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -6509,29 +5766,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Цвет корпуса
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -6627,9 +5873,8 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
+
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
@@ -6652,10 +5897,7 @@ class CategoryFilter extends React.Component {
                         className="schema-filter-popover__columns schema-filter-popover__columns_2"
                         data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                       >
-                        {}
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6678,8 +5920,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6702,8 +5942,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6726,8 +5964,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6750,8 +5986,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6774,8 +6008,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6798,8 +6030,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6822,8 +6052,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6846,8 +6074,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6870,8 +6096,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6894,8 +6118,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6918,8 +6140,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6942,8 +6162,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6966,8 +6184,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -6990,8 +6206,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7014,8 +6228,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7038,8 +6250,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7062,8 +6272,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7086,8 +6294,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7110,8 +6316,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7133,34 +6337,17 @@ class CategoryFilter extends React.Component {
                             </span>
                           </label>
                         </div>
-                        {}
                       </div>
                     </div>
                   </div>
                 </div>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -7181,29 +6368,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Материал браслета
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -7299,9 +6475,8 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
+
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
@@ -7324,10 +6499,7 @@ class CategoryFilter extends React.Component {
                         className="schema-filter-popover__columns schema-filter-popover__columns_2"
                         data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                       >
-                        {}
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7350,8 +6522,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7374,8 +6544,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7398,8 +6566,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7422,8 +6588,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7446,8 +6610,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7470,8 +6632,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7494,8 +6654,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7518,8 +6676,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7541,34 +6697,17 @@ class CategoryFilter extends React.Component {
                             </span>
                           </label>
                         </div>
-                        {}
                       </div>
                     </div>
                   </div>
                 </div>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
+
             <div
               className="schema-filter__fieldset"
               data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
             >
-              {}
-              {}
-              {}
-              {}
-              {}
               <div
                 className="schema-filter-help"
                 data-bind="css: {'schema-filter-help_opened': facet.isHelpPopoverOpened}"
@@ -7589,29 +6728,18 @@ class CategoryFilter extends React.Component {
                   </div>
                 </div>
               </div>
-              {}
-              {}
-              {}
+
               <div className="schema-filter__label">
-                {}
                 <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
                   Цвет браслета
                 </span>
-                {}
-                {}
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
+
               <div
                 className="schema-filter__facet"
                 data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
               >
                 <ul className="schema-filter__list">
-                  {}
                   <li>
                     <label
                       className="schema-filter__checkbox-item"
@@ -7707,9 +6835,8 @@ class CategoryFilter extends React.Component {
                       </span>
                     </label>
                   </li>
-                  {}
                 </ul>
-                {}
+
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
@@ -7732,10 +6859,7 @@ class CategoryFilter extends React.Component {
                         className="schema-filter-popover__columns schema-filter-popover__columns_2"
                         data-bind="css: {'schema-filter-popover__columns_2': facet.dictionary.count <= 50,\n                                  'schema-filter-popover__columns_3': facet.dictionary.count > 50 && facet.dictionary.count <= 100,\n                                  'schema-filter-popover__columns_4': facet.dictionary.count > 100}"
                       >
-                        {}
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7758,8 +6882,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7782,8 +6904,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7806,8 +6926,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7830,8 +6948,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7854,8 +6970,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7878,8 +6992,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7902,8 +7014,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7926,8 +7036,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7950,8 +7058,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7974,8 +7080,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -7998,8 +7102,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8022,8 +7124,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8046,8 +7146,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8070,8 +7168,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8094,8 +7190,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8118,8 +7212,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8142,8 +7234,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8166,8 +7256,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8190,8 +7278,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8214,8 +7300,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8238,8 +7322,6 @@ class CategoryFilter extends React.Component {
                           </label>
                         </div>
                         <div className="schema-filter-popover__column-item">
-                          {}
-                          {}
                           <label
                             className="schema-filter__checkbox-item"
                             data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
@@ -8261,56 +7343,31 @@ class CategoryFilter extends React.Component {
                             </span>
                           </label>
                         </div>
-                        {}
                       </div>
                     </div>
                   </div>
                 </div>
-                {}
               </div>
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
             </div>
-            {}
-            {}
           </div>
-          {}
+
           <div className="schema-filter-additional__wrapper">
             <div className="schema-filter-additional__trigger">
               <a href="ff">Дополнительные параметры</a>
             </div>
-            <div
-              className="schema-filter-additional"
-              data-bind="if: $root.isAdditionalParametersVisible"
-            />
+            <div className="schema-filter-additional" />
           </div>
-          {}
         </div>
         <div
           className="schema-filter-button schema-filter-button_fixed"
           id="schema-filter-button"
           style={{}}
-          data-bind="css: {'schema-filter-button_fixed': $root.states.fixed,\n                  'schema-filter-button_hanged': $root.states.hanged},\n              visible: true"
         >
-          <InfoLoader {...{ isLoadingGoods, goods }} />
+          <InfoLoader />
         </div>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    isLoadingGoods: state.goods.isLoading,
-    goods: state.goods.data,
-  }
-}
-
-export default connect(mapStateToProps)(CategoryFilter)
+export default CategoryFilter
