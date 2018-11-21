@@ -22,26 +22,6 @@ class App extends Component {
           <div className="g-container-outer">
             <div className="bnr-top-wide bnr-top-wide_fixed-height">
               <div>Banner</div>
-              <div id="div-gpt-ad-1476699139023-0">
-                <div
-                  id="google_ads_iframe_/312496551/catalog_970x90(ATF)_0__container__"
-                  style={{ border: '0pt none' }}
-                >
-                  <iframe
-                    id="google_ads_iframe_/312496551/catalog_970x90(ATF)_0"
-                    title="3rd party ad content"
-                    name="google_ads_iframe_/312496551/catalog_970x90(ATF)_0"
-                    width="728"
-                    height="90"
-                    scrolling="no"
-                    marginWidth="0"
-                    marginHeight="0"
-                    frameBorder="0"
-                    style={{ border: '0px', verticalAlign: 'bottom' }}
-                    src="./Товары в каталоге Onliner.by_files/saved_resource.html"
-                  />
-                </div>
-              </div>
             </div>
             <div className="l-gradient-wrapper">
               <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { dispatch } from 'src/store'
+import { readGoods } from 'src/ducks/goods'
 import CategoryHeader from 'src/components/CategoryHeader'
 import CategoryFilter from 'src/components/CategoryFilter'
 import Order from 'src/components/Order'
@@ -6,6 +8,12 @@ import ProductsList from 'src/components/ProductsList'
 import Pagination from 'src/components/Pagination'
 
 class CategoryPage extends React.Component {
+  componentDidMount = () => {
+    console.log('!!! CategoryPage')
+    console.log('readGoods')
+    dispatch(readGoods())
+  }
+
   render() {
     return (
       <div className="catalog-content js-scrolling-area">
@@ -19,53 +27,7 @@ class CategoryPage extends React.Component {
                 style={{
                   height: '318px',
                 }}
-              >
-                <div
-                  id="google-banner"
-                  className="schema-filter__block"
-                  data-bind="css: { 'sticked-to-top': $root.isTopSticked,\n                          'sticked-to-bottom': $root.isBottomSticked},\n                      style: { top: $root.topOffset }"
-                  style={{
-                    width: '250px',
-                    top: '0px',
-                  }}
-                >
-                  <div
-                    id="div-gpt-ad-1476699481059-0"
-                    data-google-query-id="CIzas7rZ2t4CFRQu4AodHlAEZA"
-                  >
-                    <div
-                      id="google_ads_iframe_/312496551/catalog_240x400_0__container__"
-                      style={{
-                        border: '0pt none',
-                        display: 'inline-block',
-                        width: '240px',
-                        height: '400px',
-                      }}
-                    >
-                      <iframe
-                        frameBorder={0}
-                        src="./\u0422\u043E\u0432\u0430\u0440\u044B \u0432 \u043A\u0430\u0442\u0430\u043B\u043E\u0433\u0435 Onliner.by_files/container(1).html"
-                        id="google_ads_iframe_/312496551/catalog_240x400_0"
-                        title="3rd party ad content"
-                        name=""
-                        scrolling="no"
-                        marginWidth={0}
-                        marginHeight={0}
-                        width={240}
-                        height={400}
-                        data-is-safeframe="true"
-                        sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                        data-google-container-id={7}
-                        style={{
-                          border: '0px',
-                          verticalAlign: 'bottom',
-                        }}
-                        data-load-complete="true"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
             </div>
             <div className="js-schema-results schema-grid__center-column">
               <Order />
