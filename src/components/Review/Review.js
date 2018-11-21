@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Review extends Component {
+  static PropTypes = {
+    reviews: PropTypes.array.isRequired,
+  }
+
   render() {
     const { reviews } = this.props
     if (reviews.length > 0) {
