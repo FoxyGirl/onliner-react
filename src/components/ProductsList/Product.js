@@ -5,7 +5,7 @@ import Discussions from 'src/components/Discussions'
 import Review from 'src/components/Review'
 
 class Product extends Component {
-  static PropTypes = {
+  static propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,

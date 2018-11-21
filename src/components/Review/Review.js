@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Review extends Component {
-  static PropTypes = {
+  static propTypes = {
     reviews: PropTypes.array.isRequired,
   }
 

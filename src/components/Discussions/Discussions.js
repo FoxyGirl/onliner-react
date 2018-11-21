@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Discussions extends Component {
-  static PropTypes = {
+  static propTypes = {
     discussionsCount: PropTypes.number.isRequired,
     discussionsLink: PropTypes.string.isRequired,
   }

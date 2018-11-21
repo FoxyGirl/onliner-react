@@ -12,7 +12,7 @@
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
       "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }, { "reviewId": "142" }],
       "discussionsCount": 28,
-      "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
+      "discussionsLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj3k2",
       "overlookLink": "https://tech.onliner.by/2015/05/13/apple-watch-review"
@@ -29,7 +29,7 @@
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
       "reviews": [],
       "discussionsCount": 45,
-      "discussionLink": "",
+      "discussionsLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj3k2",
       "overlookLink": "https://tech.onliner.by/2015/05/13/apple-watch-review"
@@ -46,7 +46,7 @@
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
       "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }, { "reviewId": "542" }],
       "discussionsCount": 405,
-      "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
+      "discussionsLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj3k2",
       "overlookLink": "https://tech.onliner.by/2015/05/13/apple-watch-review"
@@ -68,7 +68,7 @@
         { "reviewId": "512" }
       ],
       "discussionsCount": 0,
-      "discussionLink": "",
+      "discussionsLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2",
       "overlookLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2/reviews"
@@ -85,7 +85,7 @@
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
       "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }],
       "discussionsCount": 5,
-      "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
+      "discussionsLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2",
       "overlookLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2/reviews"
