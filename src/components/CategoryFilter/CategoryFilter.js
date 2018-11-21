@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react'
+import { connect } from 'react-redux'
+import InfoLoader from 'src/components/InfoLoader'
 
 class CategoryFilter extends React.Component {
   render() {
+    const { isLoadingGoods, goods } = this.props
     return (
       <div className="schema-filter__wrapper">
-        <div
-          className="schema-filter"
-          id="schema-filter"
-          style={{}}
-          data-bind="visible: true"
-        >
+        <div className="schema-filter" id="schema-filter" style={{}}>
           <div data-bind="template: {name: 'schema-filter-template__facets-list', data: $root.facets.general}">
             <div className="schema-filter__fieldset schema-filter__fieldset_decor">
               <div className="schema-filter__label">Каталог.Onliner</div>
@@ -20,53 +18,28 @@ class CategoryFilter extends React.Component {
                 <div className="schema-filter__store-list">
                   <a
                     href="https://itunes.apple.com/app/apple-store/id1062235600?pt=118046116&ct=catalog-section&mt=8"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="schema-filter__store-item schema-filter__store-item_apple"
-                    >  
-                    </a>
+                  />
                   <a
                     href="https://play.google.com/store/apps/details?id=by.onliner.catalog&referrer=utm_source%3Donliner%26utm_medium%3Dbanner%26utm_campaign%3Dcatalog-section%26anid%3Dadmob"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="schema-filter__store-item schema-filter__store-item_google"
-                    >  
-                  </a>
+                  />
                 </div>
               </div>
             </div>
-            {}
-            {}
-            <div
-              className="schema-filter__fieldset schema-filter__fieldset_decor"
-              data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
-            >
-              {}
+            <div className="schema-filter__fieldset schema-filter__fieldset_decor">
               <div className="schema-filter-collapse">
                 <div className="schema-filter-collapse__list">
-                  <div
-                    className="schema-filter-collapse__item"
-                    data-bind="css: { 'schema-filter-collapse__item_opened': facet.enabledInSegments.indexOf($root.activeSegment()) >= 0 }"
-                  >
+                  <div className="schema-filter-collapse__item">
                     <div className="schema-filter-collapse__header">
-                      {}
-                      {}
-                      {}
                       <div className="schema-filter__label">
-                        {}
-                        <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
-                          Город
-                        </span>
-                        {}
-                        {}
-                        {}
+                        <span>Город</span>
                       </div>
-                      {}
-                      {}
-                      <div
-                        className="schema-filter__hint"
-                        data-bind="text: facet.annotation"
-                      >
-                        только для объявлений
-                      </div>
+                      <div className="schema-filter__hint">только для объявлений</div>
                       {}
                     </div>
                     <div className="schema-filter-collapse__body">
@@ -74,66 +47,41 @@ class CategoryFilter extends React.Component {
                       {}
                       {}
                       {}
-                      <div
-                        className="schema-filter__facet"
-                        data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
-                      >
+                      <div className="schema-filter__facet">
                         <ul className="schema-filter__list">
                           {}
                           <li>
-                            <label
-                              className="schema-filter__checkbox-item"
-                              data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                            >
+                            <label className="schema-filter__checkbox-item">
                               <span className="i-checkbox">
                                 <input
                                   type="checkbox"
                                   className="i-checkbox__real"
-                                  data-bind="value: item.id, checked: facet.values"
                                   defaultValue={17030}
                                 />
                                 <span className="i-checkbox__faux" />
                               </span>
-                              <span
-                                className="schema-filter__checkbox-text"
-                                data-bind="html: item.name"
-                              >
-                                Минск
-                              </span>
+                              <span className="schema-filter__checkbox-text">Минск</span>
                             </label>
                           </li>
                           <li>
-                            <label
-                              className="schema-filter__checkbox-item"
-                              data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                            >
+                            <label className="schema-filter__checkbox-item">
                               <span className="i-checkbox">
                                 <input
                                   type="checkbox"
                                   className="i-checkbox__real"
-                                  data-bind="value: item.id, checked: facet.values"
                                   defaultValue={2458}
                                 />
                                 <span className="i-checkbox__faux" />
                               </span>
-                              <span
-                                className="schema-filter__checkbox-text"
-                                data-bind="html: item.name"
-                              >
-                                Брест
-                              </span>
+                              <span className="schema-filter__checkbox-text">Брест</span>
                             </label>
                           </li>
                           <li>
-                            <label
-                              className="schema-filter__checkbox-item"
-                              data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                            >
+                            <label className="schema-filter__checkbox-item">
                               <span className="i-checkbox">
                                 <input
                                   type="checkbox"
                                   className="i-checkbox__real"
-                                  data-bind="value: item.id, checked: facet.values"
                                   defaultValue={26099}
                                 />
                                 <span className="i-checkbox__faux" />
@@ -199,9 +147,7 @@ class CategoryFilter extends React.Component {
                         >
                           <div className="schema-filter-control__item">
                             Все
-                            <span data-bind="text: facet.dictionary.count">
-                              10
-                            </span>
+                            <span data-bind="text: facet.dictionary.count">10</span>
                             <span data-bind="text: $root.format.pluralForm(facet.dictionary.count, ['\u0432\u0430\u0440\u0438\u0430\u043D\u0442', '\u0432\u0430\u0440\u0438\u0430\u043D\u0442\u0430', '\u0432\u0430\u0440\u0438\u0430\u043D\u0442\u043E\u0432'])">
                               вариантов
                             </span>
@@ -575,10 +521,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Xiaomi
                       </span>
                     </label>
@@ -597,10 +540,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Samsung
                       </span>
                     </label>
@@ -619,10 +559,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Apple
                       </span>
                     </label>
@@ -641,10 +578,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Fitbit
                       </span>
                     </label>
@@ -663,10 +597,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Polar
                       </span>
                     </label>
@@ -3462,10 +3393,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Мобилайн
                       </span>
                     </label>
@@ -3484,10 +3412,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Vbox.by
                       </span>
                     </label>
@@ -3506,10 +3431,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         PHOTOSHOP
                       </span>
                     </label>
@@ -3528,10 +3450,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         XIAOMI-STORE.BY
                       </span>
                     </label>
@@ -3550,10 +3469,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Agroup.by
                       </span>
                     </label>
@@ -3572,10 +3488,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         FOTOMIX.BY
                       </span>
                     </label>
@@ -3594,10 +3507,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         TTN.by
                       </span>
                     </label>
@@ -4731,16 +4641,12 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Дата выхода на рынок
                     </div>
                     <div data-bind="html: facet.description">
-                      Дата выхода модели на рынок, независимо от региона.
-                      Необходимо учитывать, что появление продукта не всегда
-                      происходит одновременно во всех регионах.
+                      Дата выхода модели на рынок, независимо от региона. Необходимо учитывать, что
+                      появление продукта не всегда происходит одновременно во всех регионах.
                     </div>
                   </div>
                 </div>
@@ -4823,38 +4729,31 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Тип
                     </div>
                     <div data-bind="html: facet.description">
                       Среди "умных" устройств, носимых на руке, можно выделить:
                       <br />
                       <br />
-                      1) часы-телефон: устройства, внешне напоминающие часы, но
-                      выполняющие более разнообразные функции, помимо
-                      отображения времени. Полноценно функционируют без
-                      смартфонов. Модели этого типа всегда оснащены слотом для
-                      SIM-карты.
+                      1) часы-телефон: устройства, внешне напоминающие часы, но выполняющие более
+                      разнообразные функции, помимо отображения времени. Полноценно функционируют
+                      без смартфонов. Модели этого типа всегда оснащены слотом для SIM-карты.
                       <br />
                       <br />
-                      2) часы-компаньон: устройства, для полноценной работы
-                      требующее подключения к смартфону, часто определенного
-                      производителя и модели. Используя ресурсы смартфона, часы
-                      способны выполнять различные действия - от приема звонков
-                      до навигации;
+                      2) часы-компаньон: устройства, для полноценной работы требующее подключения к
+                      смартфону, часто определенного производителя и модели. Используя ресурсы
+                      смартфона, часы способны выполнять различные действия - от приема звонков до
+                      навигации;
                       <br />
                       <br />
-                      3) фитнес-часы: устройства, предназначенные для
-                      отслеживания различных показателей при физической нагрузке
-                      без устройств-компаньонов. Как правило, оснащены
-                      встроенным GPS-приемником.
+                      3) фитнес-часы: устройства, предназначенные для отслеживания различных
+                      показателей при физической нагрузке без устройств-компаньонов. Как правило,
+                      оснащены встроенным GPS-приемником.
                       <br />
                       <br />
-                      4) фитнес-браслет: устройства, схожие по функциям с
-                      фитнес-часами, но выполненные в виде браслета.
+                      4) фитнес-браслет: устройства, схожие по функциям с фитнес-часами, но
+                      выполненные в виде браслета.
                     </div>
                   </div>
                 </div>
@@ -4896,10 +4795,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         часы-компаньон
                       </span>
                     </label>
@@ -4918,10 +4814,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         часы-телефон
                       </span>
                     </label>
@@ -4940,10 +4833,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         фитнес-браслет
                       </span>
                     </label>
@@ -4962,10 +4852,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         фитнес-часы
                       </span>
                     </label>
@@ -5009,16 +4896,12 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Программная платформа
                     </div>
                     <div data-bind="html: facet.description">
-                      "Умные" часы выпускаются на различных программных
-                      платформах. Каждая из платформ имеет свои особенности и
-                      свои перспективы дальнейшего развития.
+                      "Умные" часы выпускаются на различных программных платформах. Каждая из
+                      платформ имеет свои особенности и свои перспективы дальнейшего развития.
                     </div>
                   </div>
                 </div>
@@ -5060,10 +4943,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Android
                       </span>
                     </label>
@@ -5082,10 +4962,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Android Wear
                       </span>
                     </label>
@@ -5104,10 +4981,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Tizen
                       </span>
                     </label>
@@ -5126,10 +5000,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Watch OS
                       </span>
                     </label>
@@ -5148,10 +5019,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         проприетарная
                       </span>
                     </label>
@@ -5195,20 +5063,15 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Поддержка программных платформ
                     </div>
                     <div data-bind="html: facet.description">
-                      "Умные" часы и подобные им устройства предназначены для
-                      взаимодействия со смартфонами, планшетами и другими
-                      мобильными компьютерами. Взаимодействие возможно только
-                      при наличии соответственного программного обеспечения для
-                      этих компьютеров. Существует несколько программных
-                      платформ для мобильных устройств, не совместимых между
-                      собой.
+                      "Умные" часы и подобные им устройства предназначены для взаимодействия со
+                      смартфонами, планшетами и другими мобильными компьютерами. Взаимодействие
+                      возможно только при наличии соответственного программного обеспечения для этих
+                      компьютеров. Существует несколько программных платформ для мобильных
+                      устройств, не совместимых между собой.
                     </div>
                   </div>
                 </div>
@@ -5250,10 +5113,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Android
                       </span>
                     </label>
@@ -5272,10 +5132,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         iOS
                       </span>
                     </label>
@@ -5294,10 +5151,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Mac OS X
                       </span>
                     </label>
@@ -5316,10 +5170,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Windows
                       </span>
                     </label>
@@ -5338,10 +5189,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Tizen
                       </span>
                     </label>
@@ -5385,21 +5233,16 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       С SIM-картой
                     </div>
                     <div data-bind="html: facet.description">
-                      Умные часы с SIM-картой в отличие от обычных смарт-часов
-                      способны работать без смартфона, и их можно использовать
-                      для совершения звонков и отправления текстовых сообщений.
-                      Весьма удобное решение — гаджет всегда на руке, а значит,
-                      его сложно потерять. Для этого используются SIM-карты
-                      форматов micro-SIM и nano-SIM — это миниатюрные SIM-карты
-                      размером 15x12 и 12,3x8,8 мм соответственно, с улучшенными
-                      параметрами безопасности.
+                      Умные часы с SIM-картой в отличие от обычных смарт-часов способны работать без
+                      смартфона, и их можно использовать для совершения звонков и отправления
+                      текстовых сообщений. Весьма удобное решение — гаджет всегда на руке, а значит,
+                      его сложно потерять. Для этого используются SIM-карты форматов micro-SIM и
+                      nano-SIM — это миниатюрные SIM-карты размером 15x12 и 12,3x8,8 мм
+                      соответственно, с улучшенными параметрами безопасности.
                     </div>
                   </div>
                 </div>
@@ -5441,10 +5284,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         micro-SIM
                       </span>
                     </label>
@@ -5463,10 +5303,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         nano-SIM
                       </span>
                     </label>
@@ -5485,10 +5322,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         e-SIM
                       </span>
                     </label>
@@ -5532,20 +5366,15 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Для детей
                     </div>
                     <div data-bind="html: facet.description">
-                      Детские умные часы предназначены для постоянной связи с
-                      ребенком и отслеживания его местоположения. Исходя из
-                      основных функций имеют несколько отличительных
-                      особенностей:
+                      Детские умные часы предназначены для постоянной связи с ребенком и
+                      отслеживания его местоположения. Исходя из основных функций имеют несколько
+                      отличительных особенностей:
                       <br />
-                      1) наличие слота под сим-карту и поддержка голосовых
-                      вызовов;
+                      1) наличие слота под сим-карту и поддержка голосовых вызовов;
                       <br />
                       2) наличие GPS-сенсора;
                       <br />
@@ -5617,19 +5446,15 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       GPS
                     </div>
                     <div data-bind="html: facet.description">
-                      GPS — глобальная система позиционирования, использующая
-                      спутники Министерства обороны США. Позволяет определять
-                      координаты в пространстве при условии беспрепятственного
-                      получения сигнала от нескольких спутников. Вследствие
-                      этого может не работать внутри зданий, в туннелях, при
-                      условии плотной облачности и т.д.
+                      GPS — глобальная система позиционирования, использующая спутники Министерства
+                      обороны США. Позволяет определять координаты в пространстве при условии
+                      беспрепятственного получения сигнала от нескольких спутников. Вследствие этого
+                      может не работать внутри зданий, в туннелях, при условии плотной облачности и
+                      т.д.
                     </div>
                   </div>
                 </div>
@@ -5697,16 +5522,12 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Умный будильник
                     </div>
                     <div data-bind="html: facet.description">
-                      Функция "умный будильник" вызывает пробуждение
-                      пользователя при помощи вибрации в наиболее благоприятное
-                      время - в фазе легкого сна.
+                      Функция "умный будильник" вызывает пробуждение пользователя при помощи
+                      вибрации в наиболее благоприятное время - в фазе легкого сна.
                     </div>
                   </div>
                 </div>
@@ -5774,16 +5595,12 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Пульсометр
                     </div>
                     <div data-bind="html: facet.description">
-                      Датчик сокращений сердца, используемый для контроля за
-                      физической нагрузкой. Может быть как встроенным, так и
-                      подключаемым извне.
+                      Датчик сокращений сердца, используемый для контроля за физической нагрузкой.
+                      Может быть как встроенным, так и подключаемым извне.
                     </div>
                   </div>
                 </div>
@@ -5851,64 +5668,52 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Технология экрана
                     </div>
                     <div data-bind="html: facet.description">
-                      В мобильных устройствах применяются две принципиально
-                      отличающиеся технологии экрана: жидкокристаллическая LCD и
-                      органическая OLED. <br />
-                      <br />В зависимости от реализации и технологии
-                      изготовления существуют следующие варианты ЖК-экранов:
+                      В мобильных устройствах применяются две принципиально отличающиеся технологии
+                      экрана: жидкокристаллическая LCD и органическая OLED. <br />
+                      <br />В зависимости от реализации и технологии изготовления существуют
+                      следующие варианты ЖК-экранов:
                       <br />
                       <br />
                       1) STN — дешевая и старая пассивно-матричная технология;
                       <br />
                       2) CSTN — цветной вариант STN;
                       <br />
-                      3) FSTN, UBC, UFB и др. — улучшенные версия STN с
-                      добавлением дополнительного слоя, повышающего
-                      контрастность и углы обзора;
+                      3) FSTN, UBC, UFB и др. — улучшенные версия STN с добавлением дополнительного
+                      слоя, повышающего контрастность и углы обзора;
                       <br />
-                      4) TFD — дешевая активно-матричная технология на
-                      тонкопленочных диодах, обеспечивающая худшую цветопередачу
-                      и контрастность по сравнению с TFT;
+                      4) TFD — дешевая активно-матричная технология на тонкопленочных диодах,
+                      обеспечивающая худшую цветопередачу и контрастность по сравнению с TFT;
                       <br />
-                      5) TFT — активно-матричная технология на тонкопленочных
-                      транзисторах, существующая в следующих вариантах:
-                      <br />– TN (Twisted Nematics) — самая простая и дешевая
-                      технология, отличающаяся высокой скоростью переключения
-                      пикселей, но малыми углами обзора и сравнительно низкой
-                      контрастностью; обычно если производитель указывает
+                      5) TFT — активно-матричная технология на тонкопленочных транзисторах,
+                      существующая в следующих вариантах:
+                      <br />– TN (Twisted Nematics) — самая простая и дешевая технология,
+                      отличающаяся высокой скоростью переключения пикселей, но малыми углами обзора
+                      и сравнительно низкой контрастностью; обычно если производитель указывает
                       технологию TFT, имеется в виду именно TN;
-                      <br />– IPS (In-Plane Switching) — более сложная и дорогая
-                      технология, обеспечивающая отличные углы обзора и хорошую
-                      цветопередачу, но худшие показатели по контрасту и
-                      скорости переключения пикселей, является разработкой
+                      <br />– IPS (In-Plane Switching) — более сложная и дорогая технология,
+                      обеспечивающая отличные углы обзора и хорошую цветопередачу, но худшие
+                      показатели по контрасту и скорости переключения пикселей, является разработкой
                       Hitachi;
-                      <br />– PLS (Plane Line Switching) — технология,
-                      аналогичная IPS, но разработанная Samsung;
-                      <br />– MVA (Multi-domain Vertical Alignment) и другие
-                      варианты VA — альтернативная технология, обеспечивающая
-                      наилучшую контрастность и нормальные углы обзора, но
-                      имеющая низкую скорость переключения пикселей и не самую
+                      <br />– PLS (Plane Line Switching) — технология, аналогичная IPS, но
+                      разработанная Samsung;
+                      <br />– MVA (Multi-domain Vertical Alignment) и другие варианты VA —
+                      альтернативная технология, обеспечивающая наилучшую контрастность и нормальные
+                      углы обзора, но имеющая низкую скорость переключения пикселей и не самую
                       идеальную цветопередачу;
-                      <br />– ASV (Advanced Super View) — технология, похожая на
-                      MVA, но обеспечивающая лучшие углы обзора и хорошую
-                      цветопередачу, разработка Sharp.
+                      <br />– ASV (Advanced Super View) — технология, похожая на MVA, но
+                      обеспечивающая лучшие углы обзора и хорошую цветопередачу, разработка Sharp.
                       <br />
                       <br />
-                      Технология OLED (AMOLED) принципиально отличается от LCD
-                      тем, что вместо ячеек с жидкими кристаллами, играющих роль
-                      управляемых затворов перед лампой подсветки, в OLED сами
-                      ячейки излучают свет. Благодаря этому у OLED нет проблем
-                      ни с углами обзора, ни с временем отклика, но остается
-                      проблема мерцания и выгорания экрана. В мобильных
-                      устройствах используется активно-матричная технология
-                      AMOLED в разных вариантах реализации.
+                      Технология OLED (AMOLED) принципиально отличается от LCD тем, что вместо ячеек
+                      с жидкими кристаллами, играющих роль управляемых затворов перед лампой
+                      подсветки, в OLED сами ячейки излучают свет. Благодаря этому у OLED нет
+                      проблем ни с углами обзора, ни с временем отклика, но остается проблема
+                      мерцания и выгорания экрана. В мобильных устройствах используется
+                      активно-матричная технология AMOLED в разных вариантах реализации.
                     </div>
                   </div>
                 </div>
@@ -5950,10 +5755,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         TFT
                       </span>
                     </label>
@@ -5972,10 +5774,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         IPS
                       </span>
                     </label>
@@ -5994,10 +5793,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         AMOLED
                       </span>
                     </label>
@@ -6016,10 +5812,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         OLED
                       </span>
                     </label>
@@ -6038,10 +5831,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         E-Ink
                       </span>
                     </label>
@@ -6060,10 +5850,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         LED
                       </span>
                     </label>
@@ -6082,10 +5869,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         Memory LCD
                       </span>
                     </label>
@@ -6129,60 +5913,47 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Сенсорный экран
                     </div>
                     <div data-bind="html: facet.description">
-                      Сенсорный экран реагирует на прикосновения пальца.
-                      Существует несколько разновидностей технологий,
-                      позволяющих реализовать сенсорный экран.
+                      Сенсорный экран реагирует на прикосновения пальца. Существует несколько
+                      разновидностей технологий, позволяющих реализовать сенсорный экран.
                       <br />
                       <br />
-                      1. Резистивная технология основана на измерении
-                      сопротивления между экраном и нанесенной поверх него
-                      мембраны. В месте нажатия мембрана прижимается к экрану, в
-                      результате чего сопротивление уменьшается. Данная
-                      технология дешевая и надежная, регистрирует нажатия любым
-                      твердым предметом, но обладает целым рядом недостатков:
-                      увеличивается толщина экрана, снижается яркость и
-                      цветопередача, требуется определенное усилие для
-                      срабатывания. Кроме того, для резистивного экрана
-                      затруднительно реализовать мультитач, особенно более чем
+                      1. Резистивная технология основана на измерении сопротивления между экраном и
+                      нанесенной поверх него мембраны. В месте нажатия мембрана прижимается к
+                      экрану, в результате чего сопротивление уменьшается. Данная технология дешевая
+                      и надежная, регистрирует нажатия любым твердым предметом, но обладает целым
+                      рядом недостатков: увеличивается толщина экрана, снижается яркость и
+                      цветопередача, требуется определенное усилие для срабатывания. Кроме того, для
+                      резистивного экрана затруднительно реализовать мультитач, особенно более чем
                       для двух пальцев.
                       <br />
                       <br />
-                      2. Ёмкостная (проекционно-ёмкостная) технология лишена
-                      большинства недостатков резистивной. Она использует
-                      принцип измерения ёмкости, образуемой нижним
-                      токопроводящим слоем, слоем стекла и прижатым с стеклу
-                      предметом. Отсутствие нанесенной сверху мембраны снимает
-                      ограничения на силу нажатия, однако ёмкостный экран
-                      реагирует только на токопроводящий предмет (например,
-                      палец). Емкостные экраны применяются в подавляющем
-                      большинстве мобильных устройств.
+                      2. Ёмкостная (проекционно-ёмкостная) технология лишена большинства недостатков
+                      резистивной. Она использует принцип измерения ёмкости, образуемой нижним
+                      токопроводящим слоем, слоем стекла и прижатым с стеклу предметом. Отсутствие
+                      нанесенной сверху мембраны снимает ограничения на силу нажатия, однако
+                      ёмкостный экран реагирует только на токопроводящий предмет (например, палец).
+                      Емкостные экраны применяются в подавляющем большинстве мобильных устройств.
                       <br />
                       <br />
-                      3. Индукционный экран требует применения специального
-                      пера. Благодаря возможности измерения силы нажатия он
-                      обычно применяется в графических планшетах.
+                      3. Индукционный экран требует применения специального пера. Благодаря
+                      возможности измерения силы нажатия он обычно применяется в графических
+                      планшетах.
                       <br />
                       <br />
-                      4. Инфракрасный экран использует принцип сканирования
-                      невидимых ИК-лучей, распространяющихся над поверхностью
-                      экрана. Он применяется там, где не нужна высокая точность,
-                      но желательно избавиться от любых дополнительных слоев
+                      4. Инфракрасный экран использует принцип сканирования невидимых ИК-лучей,
+                      распространяющихся над поверхностью экрана. Он применяется там, где не нужна
+                      высокая точность, но желательно избавиться от любых дополнительных слоев
                       экрана, например в электронных книгах на основе E-Ink.
                       <br />
                       <br />
-                      5. Технология мультитач (от англ. Multi-touch —
-                      «множественное касание») осуществляет одновременное
-                      определение координат двух и более точек касания, что
-                      позволяет изменять масштаб изображения на экране,
-                      поворачивать объекты и выполнять различные дополнительные
-                      функции.
+                      5. Технология мультитач (от англ. Multi-touch — «множественное касание»)
+                      осуществляет одновременное определение координат двух и более точек касания,
+                      что позволяет изменять масштаб изображения на экране, поворачивать объекты и
+                      выполнять различные дополнительные функции.
                     </div>
                   </div>
                 </div>
@@ -6250,16 +6021,12 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Постоянная работа экрана
                     </div>
                     <div data-bind="html: facet.description">
-                      Не во всех "умных" часах экран работает постоянно. В
-                      некоторых моделях он включается только по необходимости, а
-                      остальное время остается темным.
+                      Не во всех "умных" часах экран работает постоянно. В некоторых моделях он
+                      включается только по необходимости, а остальное время остается темным.
                     </div>
                   </div>
                 </div>
@@ -6327,15 +6094,10 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Материал корпуса
                     </div>
-                    <div data-bind="html: facet.description">
-                      Материал корпуса.
-                    </div>
+                    <div data-bind="html: facet.description">Материал корпуса.</div>
                   </div>
                 </div>
               </div>
@@ -6376,10 +6138,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         пластик
                       </span>
                     </label>
@@ -6398,10 +6157,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         металл
                       </span>
                     </label>
@@ -6420,10 +6176,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         резина
                       </span>
                     </label>
@@ -6442,10 +6195,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         алюминий
                       </span>
                     </label>
@@ -6464,10 +6214,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         сталь
                       </span>
                     </label>
@@ -6755,10 +6502,7 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Цвет корпуса
                     </div>
                     <div data-bind="html: facet.description">Цвет корпуса.</div>
@@ -6802,10 +6546,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         голубой
                       </span>
                     </label>
@@ -6824,10 +6565,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         серебристый
                       </span>
                     </label>
@@ -6846,10 +6584,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         золотой
                       </span>
                     </label>
@@ -6868,10 +6603,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         черный
                       </span>
                     </label>
@@ -6890,10 +6622,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         оранжевый
                       </span>
                     </label>
@@ -7445,15 +7174,10 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Материал браслета
                     </div>
-                    <div data-bind="html: facet.description">
-                      Материал браслета.
-                    </div>
+                    <div data-bind="html: facet.description">Материал браслета.</div>
                   </div>
                 </div>
               </div>
@@ -7494,10 +7218,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         резина
                       </span>
                     </label>
@@ -7516,10 +7237,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         силикон
                       </span>
                     </label>
@@ -7538,10 +7256,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         пластик
                       </span>
                     </label>
@@ -7560,10 +7275,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         металл
                       </span>
                     </label>
@@ -7582,10 +7294,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         кожа
                       </span>
                     </label>
@@ -7873,15 +7582,10 @@ class CategoryFilter extends React.Component {
                   data-bind="click: function (root, event) {event.originalEvent.stopPropagation(); return true;}"
                 >
                   <div className="schema-filter-help__inner">
-                    <div
-                      className="schema-filter-help__title"
-                      data-bind="html: facet.name"
-                    >
+                    <div className="schema-filter-help__title" data-bind="html: facet.name">
                       Цвет браслета
                     </div>
-                    <div data-bind="html: facet.description">
-                      Цвет браслета.
-                    </div>
+                    <div data-bind="html: facet.description">Цвет браслета.</div>
                   </div>
                 </div>
               </div>
@@ -7922,10 +7626,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         голубой
                       </span>
                     </label>
@@ -7944,10 +7645,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         черный
                       </span>
                     </label>
@@ -7966,10 +7664,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         серый
                       </span>
                     </label>
@@ -7988,10 +7683,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         светло-серый
                       </span>
                     </label>
@@ -8010,10 +7702,7 @@ class CategoryFilter extends React.Component {
                         />
                         <span className="i-checkbox__faux" />
                       </span>
-                      <span
-                        className="schema-filter__checkbox-text"
-                        data-bind="html: item.name"
-                      >
+                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
                         оранжевый
                       </span>
                     </label>
@@ -8595,9 +8284,7 @@ class CategoryFilter extends React.Component {
           {}
           <div className="schema-filter-additional__wrapper">
             <div className="schema-filter-additional__trigger">
-              <a href="ff">
-                Дополнительные параметры
-              </a>
+              <a href="ff">Дополнительные параметры</a>
             </div>
             <div
               className="schema-filter-additional"
@@ -8612,40 +8299,18 @@ class CategoryFilter extends React.Component {
           style={{}}
           data-bind="css: {'schema-filter-button_fixed': $root.states.fixed,\n                  'schema-filter-button_hanged': $root.states.hanged},\n              visible: true"
         >
-          <div className="schema-filter-button__inner-container">
-            <div
-              className="schema-filter-button__inner"
-              data-bind="css: {'schema-filter-button__inner_moved': $root.states.moved},\n                      event: {mouseout: $root.onMouseout.bind($root),\n                              mouseover: $root.onMouseover.bind($root)}"
-            >
-              <div
-                className="schema-filter-button__state schema-filter-button__state_initial schema-filter-button__state_disabled schema-filter-button__state_control"
-                data-bind="css: {'schema-filter-button__state_control': $root.states.control,\n                              'schema-filter-button__state_animated': $root.states.animated}"
-              >
-                <span
-                  className="schema-filter-button__sub schema-filter-button__sub_control"
-                  data-bind="click: $root.doMoved.bind($root)"
-                />
-                <span
-                  className="schema-filter-button__sub schema-filter-button__sub_main"
-                  data-bind="html: $root.text, click: $root.apply.bind($root)"
-                >
-                  Найдено 359 товаров
-                </span>
-              </div>
-              <div className="schema-filter-button__state schema-filter-button__state_clear schema-filter-button__state_hidden">
-                <span
-                  className="schema-filter-button__sub"
-                  data-bind="click: $root.clear.bind($root)"
-                >
-                  Сбросить фильтр
-                </span>
-              </div>
-            </div>
-          </div>
+          <InfoLoader {...{ isLoadingGoods, goods }} />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default CategoryFilter;
+const mapStateToProps = state => {
+  return {
+    isLoadingGoods: state.goods.isLoading,
+    goods: state.goods.data,
+  }
+}
+
+export default connect(mapStateToProps)(CategoryFilter)
