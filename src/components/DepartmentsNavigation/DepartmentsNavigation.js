@@ -22,7 +22,7 @@ class DepartmentsNavigation extends Component {
             }}
           />
           <ul className="catalog-navigation-classifier catalog-navigation-classifier_simple">
-            {departments &&
+            {departments.length &&
               departments.map(({ id, name }) => <DepartmentsNavigationItem key={id} name={name} />)}
           </ul>
         </div>
