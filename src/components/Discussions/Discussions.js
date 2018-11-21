@@ -11,11 +11,11 @@ class Discussions extends Component {
     const { discussionsCount, discussionsLink } = this.props
     if (discussionsCount > 0) {
       return (
-        <div class="schema-product__info-additional">
-          <a class="schema-product__info-link" href={discussionsLink}>
+        <div className="schema-product__info-additional">
+          <a className="schema-product__info-link" href={discussionsLink}>
             Обсуждение
           </a>
-          <span class="schema-product__topic-count"> {discussionsCount}</span>
+          <span className="schema-product__topic-count"> {discussionsCount}</span>
         </div>
       )
     } else {
