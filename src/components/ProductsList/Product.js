@@ -6,22 +6,22 @@ import Review from 'src/components/Review'
 
 class Product extends Component {
   static propTypes = {
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    startPrice: PropTypes.string.isRequired,
-    detailsLink: PropTypes.string.isRequired,
-    offers: PropTypes.array.isRequired,
-    reviews: PropTypes.array.isRequired,
-    discussionsCount: PropTypes.number.isRequired,
-    discussionsLink: PropTypes.string.isRequired,
-    overlookLink: PropTypes.string.isRequired,
+    product: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      startPrice: PropTypes.string.isRequired,
+      detailsLink: PropTypes.string.isRequired,
+      offers: PropTypes.array.isRequired,
+      reviews: PropTypes.array.isRequired,
+      discussionsCount: PropTypes.number.isRequired,
+      discussionsLink: PropTypes.string.isRequired,
+      overlookLink: PropTypes.string.isRequired,
+    }),
   }
 
   render() {
     const {
-      id,
       title,
       image,
       description,
@@ -33,10 +33,8 @@ class Product extends Component {
       discussionsLink,
       overlookLink,
     } = this.props.product
-    const product = this.props.product
-    console.log(`product = ${JSON.stringify(product)}`)
     return (
-      <div className="schema-product__group" key={id}>
+      <div className="schema-product__group">
         <div className="schema-product">
           <div className="schema-product__part schema-product__part_1">
             <div className="schema-product__compare">
@@ -98,7 +96,6 @@ class Product extends Component {
                     discussionsCount={discussionsCount}
                     discussionsLink={discussionsLink}
                   />
-
                   <a className="schema-product__info-link" href={overlookLink}>
                     Обзор
                   </a>

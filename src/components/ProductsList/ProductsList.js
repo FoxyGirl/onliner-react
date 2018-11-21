@@ -13,7 +13,7 @@ class ProductsList extends React.Component {
     const newItems = Object.values(goods)
 
     return (
-      <div className="schema-products" style={{}}>
+      <div className="schema-products">
         {newItems.length > 0 &&
           newItems.map(({ id, ...product }) => <Product key={id} product={product} />)}
         <div className="schema-special-block" />
