@@ -20,14 +20,16 @@ class CategoryFilter extends React.Component {
                 <div className="schema-filter__store-list">
                   <a
                     href="https://itunes.apple.com/app/apple-store/id1062235600?pt=118046116&ct=catalog-section&mt=8"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="schema-filter__store-item schema-filter__store-item_apple"
-                  />
+                    >  
+                    </a>
                   <a
                     href="https://play.google.com/store/apps/details?id=by.onliner.catalog&referrer=utm_source%3Donliner%26utm_medium%3Dbanner%26utm_campaign%3Dcatalog-section%26anid%3Dadmob"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="schema-filter__store-item schema-filter__store-item_google"
-                  />
+                    >  
+                  </a>
                 </div>
               </div>
             </div>
@@ -8593,7 +8595,7 @@ class CategoryFilter extends React.Component {
           {}
           <div className="schema-filter-additional__wrapper">
             <div className="schema-filter-additional__trigger">
-              <a data-bind="click: $root.toggleAdditionalParameters.bind($root)">
+              <a href="ff">
                 Дополнительные параметры
               </a>
             </div>

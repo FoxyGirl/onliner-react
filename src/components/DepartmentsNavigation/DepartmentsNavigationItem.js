@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-class CatalogNavigationItem extends React.Component {
+class DepartmentsNavigationItem extends Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+  }
   render() {
     const { id, name } = this.props
     return (
@@ -14,4 +18,4 @@ class CatalogNavigationItem extends React.Component {
   }
 }
 
-export default CatalogNavigationItem
+export default DepartmentsNavigationItem

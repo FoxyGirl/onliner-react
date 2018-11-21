@@ -1,13 +1,13 @@
 import { createAction, createReducer } from 'redux-act'
 import axios from 'axios'
-import { API } from '../services'
+import { API } from 'src/services'
 
-export const REDUCER = 'CATALOG'
+export const REDUCER = 'DEPARTMENTS'
 
 const NS = `${REDUCER}__`
 
 const initialState = {
-  data: {},
+  data: [],
   isLoading: false,
 }
 
@@ -32,15 +32,15 @@ reducer.on(readFailure, state => ({
   isLoading: false,
 }))
 
-export const readCatalog = () => dispatch => {
+export const readDepartments = () => dispatch => {
   dispatch(readRequest())
   return axios
-    .get(`${API}catalog/`)
+    .get(`${API}departments/`)
     .then(({ status, statusText, data }) => {
       if (status !== 200) {
         throw new Error(statusText)
       }
-      console.log(`${NS}data = ${JSON.stringify(data)}`)
+      // console.log(`${NS}data = ${JSON.stringify(data)}`)
       dispatch(readSuccess(data))
     })
     .catch(error => {

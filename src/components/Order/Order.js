@@ -4,7 +4,7 @@ class Order extends React.Component {
   render() {
     return (
       <div className="schema-order" id="schema-order">
-        <a href="" className="schema-order__link">
+        <a href="dd" className="schema-order__link">
           <span>Сначала</span>
           <span className="schema-order__text">Дорогие</span>
         </a>
