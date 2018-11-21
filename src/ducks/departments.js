@@ -40,7 +40,7 @@ export const readDepartments = () => dispatch => {
       if (status !== 200) {
         throw new Error(statusText)
       }
-      console.log(`${NS}data = ${JSON.stringify(data)}`)
+      // console.log(`${NS}data = ${JSON.stringify(data)}`)
       dispatch(readSuccess(data))
     })
     .catch(error => {

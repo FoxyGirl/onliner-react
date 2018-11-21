@@ -3,15 +3,50 @@
     {
       "id": "1",
       "categoryId": "6",
-      "title": "Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)",
+      "title": "!!Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)",
       "image": "e35ac646b6f0187cb717c7b33979c5f1.jpg",
       "isChecked": "false",
-      "desc": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18&nbsp;часов",
-      "startPrice": "38 690",
-      "producerId": "good 1",
+      "description": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18 часов",
+      "startPrice": "908 690",
+      "producerId": "1",
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
-      "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }],
+      "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }, { "reviewId": "142" }],
+      "discussionsCount": 28,
+      "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
+      "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
+      "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj3k2",
+      "overlookLink": "https://tech.onliner.by/2015/05/13/apple-watch-review"
+    },
+    {
+      "id": "21",
+      "categoryId": "6",
+      "title": "!!Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)",
+      "image": "e35ac646b6f0187cb717c7b33979c5f1.jpg",
+      "isChecked": "false",
+      "description": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18  часов",
+      "startPrice": "908 690",
+      "producerId": "1",
+      "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
+      "reviews": [],
+      "discussionsCount": 45,
       "discussionLink": "",
+      "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
+      "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj3k2",
+      "overlookLink": "https://tech.onliner.by/2015/05/13/apple-watch-review"
+    },
+    {
+      "id": "31",
+      "categoryId": "6",
+      "title": "!!Apple Watch Edition 38mm Rose Gold with Rose Modern Buckle (MJ3K2)",
+      "image": "e35ac646b6f0187cb717c7b33979c5f1.jpg",
+      "isChecked": "false",
+      "description": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18  часов",
+      "startPrice": "908 690",
+      "producerId": "1",
+      "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
+      "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }, { "reviewId": "542" }],
+      "discussionsCount": 405,
+      "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj3k2",
       "overlookLink": "https://tech.onliner.by/2015/05/13/apple-watch-review"
@@ -22,12 +57,18 @@
       "title": "Apple Watch Edition 42mm Yellow Gold with Black Sport Band (MJ8Q2)",
       "image": "f0a9956d07204c9249392e6fed257979.jpg",
       "isChecked": "false",
-      "desc": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18 часов",
+      "description": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18 часов",
       "startPrice": "27 240",
-      "producerId": "good 1",
+      "producerId": "2",
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
-      "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }],
-      "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
+      "reviews": [
+        { "reviewId": "10" },
+        { "reviewId": "12" },
+        { "reviewId": "162" },
+        { "reviewId": "512" }
+      ],
+      "discussionsCount": 0,
+      "discussionLink": "",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2",
       "overlookLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2/reviews"
@@ -38,22 +79,17 @@
       "title": "Apple Watch Edition 42mm Rose Gold with White Sport Band (MJ4A2)",
       "image": "b2346d5661a903f7468d0c53034b2fe2.jpg",
       "isChecked": "false",
-      "desc": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18 часов",
+      "description": "часы-компаньон, поддержка iOS, совместимость с iPhone 5/iPhone 5c/iPhone 5s/iPhone 6/iPhone 6 Plus, шагомер, пульсометр, время работы: 18 часов",
       "startPrice": "27 240",
-      "producerId": "good 1",
+      "producerId": "3",
       "offers": [{ "sellerId": "1" }, { "sellerId": "2" }],
       "reviews": [{ "reviewId": "10" }, { "reviewId": "12" }],
+      "discussionsCount": 5,
       "discussionLink": "http://forum.onliner.by/viewtopic.php?t=12246276",
       "adverts": [{ "advertId": "10" }, { "advertId": "12" }],
       "detailsLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2",
       "overlookLink": "https://catalog.onliner.by/smartwatch/apple/applemj8q2/reviews"
-    },
-    { "id": "4", "categoryId": "6", "title": "good 4" },
-    { "id": "5", "categoryId": "2", "title": "good 5" },
-    { "id": "6", "categoryId": "2", "title": "good 6" },
-    { "id": "7", "categoryId": "3", "title": "good 7" },
-    { "id": "8", "categoryId": "3", "title": "good 8" },
-    { "id": "9", "categoryId": "3", "title": "good 9" }
+    }
   ],
   "categories": [
     { "id": "1", "name": "mobile", "title": "Мобильные телефоны" },
@@ -77,6 +113,29 @@
     { "id": "9", "name": "Работа и офис" }
   ],
   "producers": [
-    { "id": "1", "name": "Apple Inc.", "address": " 1 Infinite Loop Cupertino, CA 95014" }
-  ]
+    { "id": "1", "name": "Apple Inc.", "address": "1 Infinite Loop Cupertino, CA 95014" },
+    {
+      "id": "2",
+      "name": "Xiaomi Corporation",
+      "address": "Wangjing West Road, Chaoyang District, A 50 -1 volumes Stone World Building 12, Block A, China"
+    },
+    {
+      "id": "3",
+      "name": "Samsung Electronics Co.",
+      "address": "Ltd. Мэтан-донг 129, Самсунг-ро, Енгтонг-гу, Suwon-si, Gyeonggi-do, 443-742, Korea"
+    },
+    {
+      "id": "4",
+      "name": "Fitbit, Inc.",
+      "address": "USA, 150 SPEAR STREET SAN FRANCISCO, CA 94105"
+    },
+    {
+      "id": "5",
+      "name": "Polar Electro Oy.",
+      "address": "Professorintie 5, 90440 Kempele, Finland"
+    }
+  ],
+  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" }
 }
