@@ -4,13 +4,11 @@ import { readGoods } from 'src/ducks/goods'
 import CategoryHeader from 'src/components/CategoryHeader'
 import CategoryFilter from 'src/components/CategoryFilter'
 import Order from 'src/components/Order'
-import ProductsList from 'src/components/ProductsList'
 import Pagination from 'src/components/Pagination'
+import ProductsList from 'src/components/ProductsList'
 
 class CategoryPage extends React.Component {
   componentDidMount = () => {
-    console.log('!!! CategoryPage')
-    console.log('readGoods')
     dispatch(readGoods())
   }
 
@@ -44,13 +42,6 @@ class CategoryPage extends React.Component {
               </div>
               <div className="schema-clear" />
               <ProductsList />
-              <div
-                className="schema-products"
-                id="schema-second-offers"
-                style={{
-                  display: 'none',
-                }}
-              />
               <Pagination />
             </div>
           </div>
