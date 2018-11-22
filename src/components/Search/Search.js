@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { dispatch } from 'src/store'
+import { searchGood } from 'src/ducks/search'
 
-class Search extends React.Component {
+class Search extends Component {
+  state = {
+    search: '',
+  }
+  input = null
+
+  handleChangeInput = event => {
+    // const { dispatch } = this.props;
+    const search = event.target.value
+    this.setState({ search })
+    console.log(`Search = ${this.state.search}`)
+    dispatch(searchGood(search))
+  }
+
   render() {
     return (
       <div id="fast-search" className="fast-search">
@@ -17,7 +32,8 @@ class Search extends React.Component {
             placeholder={`Поиск в Каталоге.  Например, "умные часы"`}
             tabIndex={1}
             name="query"
-            defaultValue=""
+            value={this.state.search}
+            onChange={this.handleChangeInput}
           />
           <button className="fast-search__submit" type="submit">
             Найти
