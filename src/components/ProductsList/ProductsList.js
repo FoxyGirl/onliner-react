@@ -10,12 +10,11 @@ class ProductsList extends React.Component {
 
   render() {
     const { goods } = this.props
-    const newItems = Object.values(goods)
 
     return (
       <div className="schema-products">
-        {newItems.length > 0 &&
-          newItems.map(({ id, ...product }) => <Product key={id} product={product} />)}
+        {goods.length > 0 &&
+          goods.map(({ id, ...product }) => <Product key={id} product={product} />)}
         <div className="schema-special-block" />
       </div>
     )
@@ -24,7 +23,11 @@ class ProductsList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    goods: state.goods.data,
+    goods: Object.values(state.goods.data).filter(
+      ({ title, description }) =>
+        title.toLowerCase().includes(state.search.searchFilter.toLowerCase()) ||
+        description.toLowerCase().includes(state.search.searchFilter.toLowerCase())
+    ),
   }
 }
 
