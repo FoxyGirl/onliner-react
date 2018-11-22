@@ -1,4 +1,5 @@
 import React from 'react'
+import { Checkbox } from 'antd'
 import InfoLoader from 'src/components/InfoLoader'
 
 class CategoryFilter extends React.Component {
@@ -385,30 +386,14 @@ class CategoryFilter extends React.Component {
               </div>
             </div>
 
-            <div
-              className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
-              data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
-            >
-              <div
-                className="schema-filter__facet"
-                data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
-              >
-                <label className="schema-filter__checkbox-item">
-                  <span className="i-checkbox">
-                    <input
-                      type="checkbox"
-                      className="i-checkbox__real"
-                      data-bind="checked: $data.value() === '1', event: {change: $data.change.bind($data, '1', $element)}"
-                    />
-                    <span className="i-checkbox__faux" />
-                  </span>
-                  <span
-                    className="schema-filter__checkbox-text"
-                    data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')"
-                  >
-                    С доставкой по Беларуси
-                  </span>
-                </label>
+            <div className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox">
+              <div className="schema-filter__facet">
+                <Checkbox
+                  name="delivery"
+                  onChange={e => console.log(`checked = ${e.target.checked} ${e.target.name}`)}
+                >
+                  С доставкой по Беларуси
+                </Checkbox>
               </div>
             </div>
 
