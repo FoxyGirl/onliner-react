@@ -5,7 +5,7 @@ import Product from './Product'
 
 class ProductsList extends React.Component {
   static propTypes = {
-    goods: PropTypes.object.isRequired,
+    goods: PropTypes.array.isRequired,
   }
 
   render() {
