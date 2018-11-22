@@ -1,8 +1,21 @@
 import React from 'react'
-import { Checkbox } from 'antd'
+import { Checkbox, Row, Col } from 'antd'
 import InfoLoader from 'src/components/InfoLoader'
 
+const CheckboxGroup = Checkbox.Group
+const optionsProducers = [
+  { label: 'Apple', value: '1' },
+  { label: 'Xiaomi ', value: '2' },
+  { label: 'Samsung', value: '3' },
+  { label: 'Fitbit', value: '4' },
+  { label: 'Polar', value: '5' },
+]
+
 class CategoryFilter extends React.Component {
+  verticalCheckboxGroup = {
+    display: 'flex',
+    flexDirection: 'column',
+  }
   render() {
     return (
       <div className="schema-filter__wrapper">
@@ -397,20 +410,18 @@ class CategoryFilter extends React.Component {
               </div>
             </div>
 
-            <div
-              className="schema-filter__fieldset"
-              data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
-            >
+            <div className="schema-filter__fieldset">
               <div className="schema-filter__label">
-                <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
-                  Производитель
-                </span>
+                <span>Производитель</span>
               </div>
 
-              <div
-                className="schema-filter__facet"
-                data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
-              >
+              <div className="schema-filter__facet">
+                <CheckboxGroup
+                  options={optionsProducers}
+                  defaultValue={[]}
+                  style={this.verticalCheckboxGroup}
+                  onChange={checkedValues => console.log(`checked = ${checkedValues} `)}
+                />
                 <ul className="schema-filter__list">
                   <li>
                     <label
