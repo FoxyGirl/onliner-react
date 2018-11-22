@@ -35,7 +35,11 @@ class InfoLoader extends Component {
 const mapStateToProps = state => {
   return {
     isLoadingGoods: state.goods.isLoading,
-    goodsAmount: Object.keys(state.goods.data).length,
+    goodsAmount: Object.values(state.goods.data).filter(
+      ({ title, description }) =>
+        title.toLowerCase().includes(state.search.searchFilter.toLowerCase()) ||
+        description.toLowerCase().includes(state.search.searchFilter.toLowerCase())
+    ).length,
   }
 }
 
