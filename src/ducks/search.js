@@ -7,8 +7,7 @@ export const REDUCER = 'SEARCH'
 const NS = `${REDUCER}__`
 
 const initialState = {
-  search: '',
-  isLoading: false,
+  searchFilter: '',
 }
 
 const reducer = createReducer({}, initialState)
@@ -16,12 +15,11 @@ const reducer = createReducer({}, initialState)
 const startSearch = createAction(`${NS}SEARCH_GOOD`)
 reducer.on(startSearch, (state, searchInput) => ({
   ...state,
-  search: searchInput,
-  isLoading: true,
+  searchFilter: searchInput,
 }))
 
-export const searchGood = search => dispatch => {
-  dispatch(startSearch(search))
+export const searchGood = searchFilter => dispatch => {
+  dispatch(startSearch(searchFilter))
 }
 
 export default reducer
