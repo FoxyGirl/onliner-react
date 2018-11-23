@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { makeCorrectEndsRu } from 'src/services'
 
 class InfoLoader extends Component {
   static propTypes = {
@@ -10,7 +11,10 @@ class InfoLoader extends Component {
 
   render() {
     const { isLoadingGoods, goodsAmount } = this.props
-    const outInfo = isLoadingGoods ? `Поиск товаров...` : `Найдено ${goodsAmount} товаров`
+    const goodsArray = ['товар', 'товара', 'товаров']
+    const outInfo = isLoadingGoods
+      ? `Поиск товаров...`
+      : `Найдено ${makeCorrectEndsRu(goodsAmount, goodsArray)}`
     const loadingClass = isLoadingGoods ? 'schema-filter-button__state_animated' : ''
     return (
       <div className="schema-filter-button__inner-container">
