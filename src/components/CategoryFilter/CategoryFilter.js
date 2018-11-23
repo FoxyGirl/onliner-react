@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { dispatch } from 'src/store'
 import { filterGood } from 'src/ducks/filter'
+import { readGoods } from 'src/ducks/goods'
 import { Checkbox } from 'antd'
 import InfoLoader from 'src/components/InfoLoader'
 
@@ -15,8 +16,8 @@ const optionsProducers = [
 
 class CategoryFilter extends Component {
   handlerProducer = checkedValues => {
-    console.log(`checked = ${checkedValues} isArray = ${Array.isArray(checkedValues)}`)
     dispatch(filterGood(checkedValues))
+    dispatch(readGoods())
   }
 
   render() {
