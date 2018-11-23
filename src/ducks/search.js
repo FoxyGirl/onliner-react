@@ -1,6 +1,4 @@
 import { createAction, createReducer } from 'redux-act'
-import axios from 'axios'
-import { API } from 'src/services'
 
 export const REDUCER = 'SEARCH'
 
