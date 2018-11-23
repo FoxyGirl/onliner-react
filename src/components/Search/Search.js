@@ -9,10 +9,8 @@ class Search extends Component {
   input = null
 
   handleChangeInput = event => {
-    // const { dispatch } = this.props;
     const search = event.target.value
     this.setState({ search })
-    console.log(`Search = ${this.state.search}`)
     dispatch(searchGood(search))
   }
 

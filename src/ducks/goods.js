@@ -33,10 +33,20 @@ reducer.on(readFailure, state => ({
   isLoading: false,
 }))
 
-export const readGoods = () => dispatch => {
+export const readGoods = () => (dispatch, getState) => {
+  const state = getState()
+
+  const createProducerFilterRequest = producerFilter => {
+    if (producerFilter.length < 0) {
+      return
+    }
+    const request = producerFilter.reduce((acc, item) => `${acc}producerId=${item}&`, '?')
+    return request
+  }
+  const producerFilterRequest = createProducerFilterRequest(state.filter.producerFilter)
   dispatch(readRequest())
   return axios
-    .get(`${API}goods/`)
+    .get(`${API}goods/${producerFilterRequest}`)
     .then(({ status, statusText, data }) => {
       if (status !== 200) {
         throw new Error(statusText)

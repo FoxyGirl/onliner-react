@@ -1,7 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { dispatch } from 'src/store'
+import { filterGood } from 'src/ducks/filter'
+import { readGoods } from 'src/ducks/goods'
+import { Checkbox } from 'antd'
 import InfoLoader from 'src/components/InfoLoader'
 
-class CategoryFilter extends React.Component {
+const CheckboxGroup = Checkbox.Group
+const optionsProducers = [
+  { label: 'Apple', value: '1' },
+  { label: 'Xiaomi ', value: '2' },
+  { label: 'Samsung', value: '3' },
+  { label: 'Fitbit', value: '4' },
+  { label: 'Polar', value: '5' },
+]
+
+class CategoryFilter extends Component {
+  handlerProducer = checkedValues => {
+    dispatch(filterGood(checkedValues))
+    dispatch(readGoods())
+  }
+
   render() {
     return (
       <div className="schema-filter__wrapper">
@@ -19,13 +37,17 @@ class CategoryFilter extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="schema-filter__store-item schema-filter__store-item_apple"
-                  />
+                  >
+                    {' '}
+                  </a>
                   <a
                     href="https://play.google.com/store/apps/details?id=by.onliner.catalog&referrer=utm_source%3Donliner%26utm_medium%3Dbanner%26utm_campaign%3Dcatalog-section%26anid%3Dadmob"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="schema-filter__store-item schema-filter__store-item_google"
-                  />
+                  >
+                    {' '}
+                  </a>
                 </div>
               </div>
             </div>
@@ -385,145 +407,28 @@ class CategoryFilter extends React.Component {
               </div>
             </div>
 
-            <div
-              className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox"
-              data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
-            >
-              <div
-                className="schema-filter__facet"
-                data-bind="template: {name: 'schema-filter-template__boolean', data: facet}"
-              >
-                <label className="schema-filter__checkbox-item">
-                  <span className="i-checkbox">
-                    <input
-                      type="checkbox"
-                      className="i-checkbox__real"
-                      data-bind="checked: $data.value() === '1', event: {change: $data.change.bind($data, '1', $element)}"
-                    />
-                    <span className="i-checkbox__faux" />
-                  </span>
-                  <span
-                    className="schema-filter__checkbox-text"
-                    data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')"
-                  >
-                    С доставкой по Беларуси
-                  </span>
-                </label>
+            <div className="schema-filter__fieldset schema-filter__fieldset_boolean-checkbox">
+              <div className="schema-filter__facet">
+                <Checkbox
+                  name="delivery"
+                  onChange={e => console.log(`checked = ${e.target.checked} ${e.target.name}`)}
+                >
+                  С доставкой по Беларуси
+                </Checkbox>
               </div>
             </div>
 
-            <div
-              className="schema-filter__fieldset"
-              data-bind="css: {'schema-filter__fieldset_boolean-checkbox': facet.boolType === 'checkbox',\n                          'schema-filter__fieldset_decor': facet.isDecorated }"
-            >
+            <div className="schema-filter__fieldset">
               <div className="schema-filter__label">
-                <span data-bind="html: facet.name + (facet.unit ? ', ' + facet.unit : '')">
-                  Производитель
-                </span>
+                <span>Производитель</span>
               </div>
 
-              <div
-                className="schema-filter__facet"
-                data-bind="template: {name: 'schema-filter-template__dictionary', data: facet}"
-              >
-                <ul className="schema-filter__list">
-                  <li>
-                    <label
-                      className="schema-filter__checkbox-item"
-                      data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                    >
-                      <span className="i-checkbox">
-                        <input
-                          type="checkbox"
-                          className="i-checkbox__real"
-                          data-bind="value: item.id, checked: facet.values"
-                          defaultValue="xiaomi"
-                        />
-                        <span className="i-checkbox__faux" />
-                      </span>
-                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
-                        Xiaomi
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <label
-                      className="schema-filter__checkbox-item"
-                      data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                    >
-                      <span className="i-checkbox">
-                        <input
-                          type="checkbox"
-                          className="i-checkbox__real"
-                          data-bind="value: item.id, checked: facet.values"
-                          defaultValue="samsung"
-                        />
-                        <span className="i-checkbox__faux" />
-                      </span>
-                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
-                        Samsung
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <label
-                      className="schema-filter__checkbox-item"
-                      data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                    >
-                      <span className="i-checkbox">
-                        <input
-                          type="checkbox"
-                          className="i-checkbox__real"
-                          data-bind="value: item.id, checked: facet.values"
-                          defaultValue="apple"
-                        />
-                        <span className="i-checkbox__faux" />
-                      </span>
-                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
-                        Apple
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <label
-                      className="schema-filter__checkbox-item"
-                      data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                    >
-                      <span className="i-checkbox">
-                        <input
-                          type="checkbox"
-                          className="i-checkbox__real"
-                          data-bind="value: item.id, checked: facet.values"
-                          defaultValue="fitbit"
-                        />
-                        <span className="i-checkbox__faux" />
-                      </span>
-                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
-                        Fitbit
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <label
-                      className="schema-filter__checkbox-item"
-                      data-bind="css: {'schema-filter__checkbox-item_disabled': facet.isDisabledLabel(item.id)}"
-                    >
-                      <span className="i-checkbox">
-                        <input
-                          type="checkbox"
-                          className="i-checkbox__real"
-                          data-bind="value: item.id, checked: facet.values"
-                          defaultValue="polarelectro"
-                        />
-                        <span className="i-checkbox__faux" />
-                      </span>
-                      <span className="schema-filter__checkbox-text" data-bind="html: item.name">
-                        Polar
-                      </span>
-                    </label>
-                  </li>
-                </ul>
-
+              <div className="schema-filter__facet">
+                <CheckboxGroup
+                  options={optionsProducers}
+                  defaultValue={[]}
+                  onChange={this.handlerProducer}
+                />
                 <div
                   className="schema-filter-control schema-filter-control_more"
                   data-bind="click: facet.togglePopover.bind(facet)"
