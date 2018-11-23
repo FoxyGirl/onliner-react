@@ -17,7 +17,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="layout-container">
+      <div className="layout-container" id="onliner-react">
         <div id="container">
           <div className="g-container-outer">
             <div className="bnr-top-wide bnr-top-wide_fixed-height">
