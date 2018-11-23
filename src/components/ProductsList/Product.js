@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { PATH_SRC } from 'src/services'
+import { PATH_SRC, makeCorrectEndsRu } from 'src/services'
 import Discussions from 'src/components/Discussions'
 import Review from 'src/components/Review'
 
@@ -33,6 +33,8 @@ class Product extends Component {
       discussionsLink,
       overlookLink,
     } = this.props.product
+    const offersArray = ['предложение', 'предложения', 'предложений']
+    const offersCount = `${makeCorrectEndsRu(offers.length, offersArray)} `
     return (
       <div className="schema-product__group">
         <div className="schema-product">
@@ -71,7 +73,7 @@ class Product extends Component {
                       href={detailsLink}
                       title={title}
                     >
-                      {offers.length} предложение
+                      {offersCount}
                     </a>
                   </div>
                 </div>
